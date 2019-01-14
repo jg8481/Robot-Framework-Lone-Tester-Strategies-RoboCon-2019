@@ -28,14 +28,14 @@ if [ "$1" == "Metrics-Dashboard-Workshop-Example" ]; then
   echo "------------------------------------[[[[ Gather, Combine Metrics, And Deploy To Heroku -- Robot Framework Metrics Dashboard ]]]]------------------------------------"
   echo
   cd ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/
-  find . -name \*.jpg -exec cp {} ./RobotFramework-Metrics-Results \; > /dev/null 2>&1 &&
+  ## find . -name \*.jpg -exec cp {} ./RobotFramework-Metrics-Results \; > /dev/null 2>&1 &&
   cd ./RobotFramework-Metrics-Results
   git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019.git ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
   rm -rf ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/*.jpg &&
   rm -rf ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/*.html &&
-  cp ./most-recent-sbtm-desktop-test-session-log.html ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/most-recent-sbtm-desktop-test-session-log.html &&
+  ## cp ./most-recent-sbtm-desktop-test-session-log.html ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/most-recent-sbtm-desktop-test-session-log.html &&
   cp ./most-recent-sbtm-desktop-test-session-metrics.html ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/most-recent-sbtm-desktop-test-session-metrics.html &&
-  find . -name \*.jpg -exec cp {} ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 \; > /dev/null 2>&1 &&
+  ## find . -name \*.jpg -exec cp {} ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 \; > /dev/null 2>&1 &&
   echo "Gathered, metrics files, and deployed them to Heroku on $TIMESTAMP" > ./git_commit_message.txt &&
   GIT_COMMIT_MESSAGE=$(cat ./git_commit_message.txt) &&
   cd ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
