@@ -26,25 +26,25 @@ Also set up a `.env` file using the provided `template.env` file.
 There will be presentation slides explaining the following in more detail and I will assist everyone with running them.
 
 1. Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Postman-Newman-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-One-cURL-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Requests-Library-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Python-Library-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Run-All-Docker-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Postman-Newman-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-One-cURL-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Requests-Library-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Python-Library-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Run-All-Docker-Workshop-Examples
 2. Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Postman-Newman-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Python-Library-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Requests-Library-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-cURL-Workshop-Examples
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Long-Graphwalker-Run-Workshop-Example
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Short-Graphwalker-Run-Workshop-Example
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Previous-Long-Graphwalker-Run-Workshop-Example
-⋅⋅* ./start-specific-docker-example-workflows-for-workshop.sh Previous-Short-Graphwalker-Run-Workshop-Example
-⋅⋅* ./start-specific-local-machine-example-workflows-for-workshop.sh Hybrid-Tool-Desktop-Workshop-Example
-⋅⋅* ./start-specific-local-machine-example-workflows-for-workshop.sh Hybrid-Tool-Appium-Workshop-Example
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Postman-Newman-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Python-Library-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Requests-Library-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-cURL-Workshop-Examples
+- ./start-specific-docker-example-workflows-for-workshop.sh Long-Graphwalker-Run-Workshop-Example
+- ./start-specific-docker-example-workflows-for-workshop.sh Short-Graphwalker-Run-Workshop-Example
+- ./start-specific-docker-example-workflows-for-workshop.sh Previous-Long-Graphwalker-Run-Workshop-Example
+- ./start-specific-docker-example-workflows-for-workshop.sh Previous-Short-Graphwalker-Run-Workshop-Example
+- ./start-specific-local-machine-example-workflows-for-workshop.sh Hybrid-Tool-Desktop-Workshop-Example
+- ./start-specific-local-machine-example-workflows-for-workshop.sh Hybrid-Tool-Appium-Workshop-Example
 3. Part-Three--Combined-Results-Visualizing-Your-Testing-Story
-⋅⋅* ./start-specific-result-gathering-example-workflows-for-workshop.sh Combined-Results-Dashboard-Workshop-Example
-⋅⋅* ./start-specific-result-gathering-example-workflows-for-workshop.sh Metrics-Dashboard-Workshop-Example
+- ./start-specific-result-gathering-example-workflows-for-workshop.sh Combined-Results-Dashboard-Workshop-Example
+- ./start-specific-result-gathering-example-workflows-for-workshop.sh Metrics-Dashboard-Workshop-Example
 
 If you have a Windows operating system, the following options may work for you...
 - Consider downloading Git for Windows -> https://git-scm.com/download/win and https://gitforwindows.org/
@@ -55,19 +55,19 @@ If you have a Windows operating system, the following options may work for you..
 
 ### Big thank you to the following people and groups.
 
-Pekka Klarck
-Ed Manlove
-Antti Karjalainen
-James Bach
-Jonathon Bach
-Michael Bolton
-Cem Kaner
-Kristian Karl
-Mikko Korpela
-Bryan Oakley
-Shiva Prasad Adirala
-The Docker development team
-The Graphwalker development team
-The entire Robot Framework community and its contributors.
+- Pekka Klarck
+- Ed Manlove
+- Antti Karjalainen
+- James Bach
+- Jonathon Bach
+- Michael Bolton
+- Cem Kaner
+- Kristian Karl
+- Mikko Korpela
+- Bryan Oakley
+- Shiva Prasad Adirala
+- The Docker development team
+- The Graphwalker development team
+- The entire Robot Framework community and its contributors.
 
 Their contributions to the testing community helped me a lot with this workshop and my day-to-day work.
