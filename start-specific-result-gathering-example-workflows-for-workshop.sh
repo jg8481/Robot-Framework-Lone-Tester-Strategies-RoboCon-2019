@@ -37,8 +37,8 @@ if [ "$1" == "Metrics-Dashboard-Workshop-Example" ]; then
   cp ./most-recent-sbtm-desktop-test-session-metrics.html ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019/most-recent-sbtm-desktop-test-session-metrics.html &&
   find . -name \*.jpg -exec cp {} ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 \; > /dev/null 2>&1 &&
   echo "Gathered, metrics files, and deployed them to Heroku on $TIMESTAMP" > ./git_commit_message.txt &&
-  cd ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
   GIT_COMMIT_MESSAGE=$(cat ./git_commit_message.txt) &&
+  cd ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
   git add . &&
   git commit -m "$GIT_COMMIT_MESSAGE" &&
   git push origin master &&
