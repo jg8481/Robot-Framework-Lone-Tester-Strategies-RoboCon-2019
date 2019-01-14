@@ -44,7 +44,7 @@ USER-CREATED PYTHON LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a PATCH req
     Log To Console    .
     Should Be Equal As Strings    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements
 
 USER-CREATED PYTHON LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a GET request to jsonplaceholder.typicode.com/posts/1 and check the response.
     ${PYTHON_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE}=    Send Get Request Robot File One
@@ -62,7 +62,7 @@ USER-CREATED PYTHON LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a GET reque
     Should Be Equal As Strings    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.json()}    quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
     Dictionary Should Not Contain Value    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements
 
 USER-CREATED PYTHON LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a DELETE request to jsonplaceholder.typicode.com/posts/1 and check the response.
     ${PYTHON_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE}=    Send Delete Request Robot File One
@@ -75,4 +75,4 @@ USER-CREATED PYTHON LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a DELETE re
     Log To Console    .
     Should Be Equal As Strings    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE.status_code}    200
     Should Be Empty    ${PYTHON_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE.json()}
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements

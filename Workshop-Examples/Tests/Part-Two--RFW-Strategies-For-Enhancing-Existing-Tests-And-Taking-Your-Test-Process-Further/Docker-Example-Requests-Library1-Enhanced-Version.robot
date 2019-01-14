@@ -27,4 +27,4 @@ REQUESTS LIBRARY EXAMPLE PART TWO - ROBOT FILE ONE : Send a PATCH request to "us
     Log To Console    .
     Log To Console    .
     Should Not Be Equal As Strings    ${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.status_code}    200
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements

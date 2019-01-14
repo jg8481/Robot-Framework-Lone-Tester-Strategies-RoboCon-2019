@@ -51,7 +51,7 @@ REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a PATCH request to "bo
     Log To Console    .
     Should Be Equal As Strings    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements
 
 REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a GET request to jsonplaceholder.typicode.com/posts/2 and check the response.
     ${HEADERS}=       Create Dictionary    Content-Type    application/json
@@ -71,7 +71,7 @@ REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a GET request to jsonp
     Should Be Equal As Strings    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.json()}    qui est esse
     Dictionary Should Not Contain Value    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements
 
 REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a DELETE request to jsonplaceholder.typicode.com/posts/2 and check the response.
     ${HEADERS}=       Create Dictionary    Content-Type    application/json
@@ -86,4 +86,4 @@ REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a DELETE request to js
     Log To Console    .
     Should Be Equal As Strings    ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE.status_code}    200
     Should Be Empty     ${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE.json()}
-    [Tags]    Regression_Tests    Refined_And_Room_For_More_Enhancements
+    [Tags]    Regression_Tests    Slightly_Refined_And_Room_For_Enhancements
