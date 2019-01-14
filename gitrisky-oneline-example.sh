@@ -1,0 +1,1 @@
+cd /path/to/name-of-your-repo && for i in $(git log --since=2.weeks --grep='fix' --pretty=format:%h | uniq -c | awk '{print $2}'); do echo && gitrisky predict -c $i && git log -n 1 --shortstat $i | grep -v 'Author'; done

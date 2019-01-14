@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190114 00:29:59.278" rpa="false" generator="Rebot 3.1.1 (Python 3.5.6 on linux)">
+<suite id="s1" name="Robot Framework test run with cURL in parallel">
+<suite source="/rfw/Tests/Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects/Docker-Example-Curl1.robot" id="s1-s1" name="Docker-Example-Curl1">
+<test id="s1-s1-t1" name="CURL EXAMPLE PART ONE - ROBOT FILE ONE : Send a POST request to jsonplaceholder.typicode.com/posts and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X POST -H 'Content-Type: application/json' http://${BASE_URL}/posts/</arg>
+<arg>alias=curl_robot_file_one_post</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:56.799" level="INFO">Starting process:
+curl -i -X POST -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/</msg>
+<msg timestamp="20190114 00:29:56.805" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:57.316" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:57.316" starttime="20190114 00:29:56.799" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_one_post</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_ONE_POST_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:57.318" level="INFO">${CURL_ROBOT_FILE_ONE_POST_RESPONSE} = HTTP/1.1 201 Created
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 15
+Connection: keep-alive
+Set-Cookie: __cfduid=ddceb9ce58543f0f4d758530e516912a11...</msg>
+<status endtime="20190114 00:29:57.318" starttime="20190114 00:29:57.317" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_POST_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.319" level="INFO">HTTP/1.1 201 Created
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 15
+Connection: keep-alive
+Set-Cookie: __cfduid=ddceb9ce58543f0f4d758530e516912a11547425796; expires=Tue, 14-Jan-20 00:29:56 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/posts//101
+X-Content-Type-Options: nosniff
+Etag: W/"f-4jjw4Y8q22Yv1PV9m28FczJgjzk"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdbe55db6493-FRA
+
+{
+  "id": 101
+}</msg>
+<status endtime="20190114 00:29:57.319" starttime="20190114 00:29:57.319" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.321" starttime="20190114 00:29:57.320" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.322" starttime="20190114 00:29:57.321" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.323" starttime="20190114 00:29:57.322" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_POST_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:57.324" starttime="20190114 00:29:57.323" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.325" starttime="20190114 00:29:57.324" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.328" starttime="20190114 00:29:57.325" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.329" starttime="20190114 00:29:57.328" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_POST_RESPONSE}</arg>
+<arg>201</arg>
+</arguments>
+<status endtime="20190114 00:29:57.329" starttime="20190114 00:29:57.329" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_POST_RESPONSE}</arg>
+<arg>"id": 101</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:57.330" starttime="20190114 00:29:57.329" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:57.330" starttime="20190114 00:29:56.797" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s1-t2" name="CURL EXAMPLE PART ONE - ROBOT FILE ONE : Send a PATCH request to &quot;title&quot; for jsonplaceholder.typicode.com/posts/1 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X PATCH -H 'Content-Type: application/json' http://${BASE_URL}/posts/1 -d '{"title":"Testing with Robot Framework."}'</arg>
+<arg>alias=curl_robot_file_one_patch</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.333" level="INFO">Starting process:
+curl -i -X PATCH -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/1 -d '{"title":"Testing with Robot Framework."}'</msg>
+<msg timestamp="20190114 00:29:57.338" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:57.945" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:57.945" starttime="20190114 00:29:57.333" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_one_patch</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:57.947" level="INFO">${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 247
+Connection: keep-alive
+Set-Cookie: __cfduid=d8f517db5b2397739b5b18f9db0f07b8b15474...</msg>
+<status endtime="20190114 00:29:57.947" starttime="20190114 00:29:57.946" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.948" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 247
+Connection: keep-alive
+Set-Cookie: __cfduid=d8f517db5b2397739b5b18f9db0f07b8b1547425797; expires=Tue, 14-Jan-20 00:29:57 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"f7-HtPCF3aWvOOlcV/mfwVTkbUGiXM"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdc197a3647b-FRA
+
+{
+  "userId": 1,
+  "id": 1,
+  "title": "Testing with Robot Framework.",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}</msg>
+<status endtime="20190114 00:29:57.948" starttime="20190114 00:29:57.947" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.952" starttime="20190114 00:29:57.949" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.953" starttime="20190114 00:29:57.952" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.954" starttime="20190114 00:29:57.953" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:57.955" starttime="20190114 00:29:57.954" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.956" starttime="20190114 00:29:57.956" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.958" starttime="20190114 00:29:57.957" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.962" starttime="20190114 00:29:57.958" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:57.963" starttime="20190114 00:29:57.962" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+<arg>"title": "Testing with Robot Framework."</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:57.963" starttime="20190114 00:29:57.963" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:57.964" starttime="20190114 00:29:57.331" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s1-t3" name="CURL EXAMPLE PART ONE - ROBOT FILE ONE : Send a GET request to jsonplaceholder.typicode.com/posts/1 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -H 'Content-Type: application/json' http://${BASE_URL}/posts/1</arg>
+<arg>alias=curl_robot_file_one_get</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.967" level="INFO">Starting process:
+curl -i -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/1</msg>
+<msg timestamp="20190114 00:29:57.972" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:58.074" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:58.075" starttime="20190114 00:29:57.967" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_one_get</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:58.080" level="INFO">${CURL_ROBOT_FILE_ONE_GET_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Connection: keep-alive
+Set-Cookie: __cfduid=de71c78d715d0f558d36f7d1d7cecc07e15474...</msg>
+<status endtime="20190114 00:29:58.080" starttime="20190114 00:29:58.077" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.081" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 292
+Connection: keep-alive
+Set-Cookie: __cfduid=de71c78d715d0f558d36f7d1d7cecc07e1547425798; expires=Tue, 14-Jan-20 00:29:58 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: public, max-age=14400
+Pragma: no-cache
+Expires: Mon, 14 Jan 2019 04:29:58 GMT
+X-Content-Type-Options: nosniff
+Etag: W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"
+Via: 1.1 vegur
+CF-Cache-Status: HIT
+Accept-Ranges: bytes
+Server: cloudflare
+CF-RAY: 498bfdc585acc2ba-FRA
+
+{
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}</msg>
+<status endtime="20190114 00:29:58.082" starttime="20190114 00:29:58.081" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.083" starttime="20190114 00:29:58.082" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.084" starttime="20190114 00:29:58.083" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.085" starttime="20190114 00:29:58.084" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:58.086" starttime="20190114 00:29:58.085" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.086" starttime="20190114 00:29:58.086" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.087" starttime="20190114 00:29:58.087" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.088" starttime="20190114 00:29:58.087" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:58.089" starttime="20190114 00:29:58.088" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+<arg>"id": 1</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.089" starttime="20190114 00:29:58.089" status="PASS"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+<arg>Testing with Robot Framework</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.090" starttime="20190114 00:29:58.089" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:58.090" starttime="20190114 00:29:57.965" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s1-t4" name="CURL EXAMPLE PART ONE - ROBOT FILE ONE : Send a DELETE request to jsonplaceholder.typicode.com/posts/1 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X DELETE -H 'Content-Type: application/json' http://${BASE_URL}/posts/1</arg>
+<arg>alias=curl_robot_file_one_delete</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.093" level="INFO">Starting process:
+curl -i -X DELETE -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/1</msg>
+<msg timestamp="20190114 00:29:58.098" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:58.505" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:58.506" starttime="20190114 00:29:58.093" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_one_delete</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:58.507" level="INFO">${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Set-Cookie: __cfduid=daaf9aaa4e58260117cb04be7e59b462f1547425...</msg>
+<status endtime="20190114 00:29:58.507" starttime="20190114 00:29:58.506" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.508" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Set-Cookie: __cfduid=daaf9aaa4e58260117cb04be7e59b462f1547425798; expires=Tue, 14-Jan-20 00:29:58 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdc6531c64c3-FRA
+
+{}</msg>
+<status endtime="20190114 00:29:58.508" starttime="20190114 00:29:58.507" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.509" starttime="20190114 00:29:58.508" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.510" starttime="20190114 00:29:58.510" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.511" starttime="20190114 00:29:58.511" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:58.512" starttime="20190114 00:29:58.512" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.513" starttime="20190114 00:29:58.513" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.514" starttime="20190114 00:29:58.514" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.515" starttime="20190114 00:29:58.514" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:58.516" starttime="20190114 00:29:58.515" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+<arg>{}</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.516" starttime="20190114 00:29:58.516" status="PASS"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+<arg>"id": 1</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.517" starttime="20190114 00:29:58.516" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:58.517" starttime="20190114 00:29:58.091" critical="yes" status="PASS"></status>
+</test>
+<doc>In a hypothetical scenario, where you are split between 3 or more frequently changing projects. Several of them are maybe, days, weeks or months past their delivery date.
+You are brought in to quickly learn everything about the project and set up basic regression tests touching all of the high risk areas, running in the CI pipeline in less than 10 working
+days (ideally they want it in probably 5 days or less). This might be a situation where people are relying on various types of tools to test things out and quickly explore system behavior,
+maybe there are dozens of cURL one-liners being shared by the developers...</doc>
+<status endtime="20190114 00:29:58.519" starttime="20190114 00:29:56.786" status="PASS"></status>
+</suite>
+<suite source="/rfw/Tests/Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects/Docker-Example-Curl2.robot" id="s1-s2" name="Docker-Example-Curl2">
+<test id="s1-s2-t1" name="CURL EXAMPLE PART ONE - ROBOT FILE TWO : Send a PUT request to jsonplaceholder.typicode.com/posts/2 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X PUT -H 'Content-Type: application/json' http://${BASE_URL}/posts/2</arg>
+<arg>alias=curl_robot_file_two_put</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:56.814" level="INFO">Starting process:
+curl -i -X PUT -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/2</msg>
+<msg timestamp="20190114 00:29:56.819" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:57.324" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:57.325" starttime="20190114 00:29:56.814" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_two_put</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:57.326" level="INFO">${CURL_ROBOT_FILE_TWO_PUT_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 13
+Connection: keep-alive
+Set-Cookie: __cfduid=d49f8c754ef8e3dd3fd861ec4300ad8eb154742...</msg>
+<status endtime="20190114 00:29:57.326" starttime="20190114 00:29:57.325" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.327" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 13
+Connection: keep-alive
+Set-Cookie: __cfduid=d49f8c754ef8e3dd3fd861ec4300ad8eb1547425796; expires=Tue, 14-Jan-20 00:29:56 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"d-GUEcOn+YmHSF2tizNHXIHPjfR5k"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdbe570a647b-FRA
+
+{
+  "id": 2
+}</msg>
+<status endtime="20190114 00:29:57.327" starttime="20190114 00:29:57.326" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.328" starttime="20190114 00:29:57.327" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.329" starttime="20190114 00:29:57.328" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.330" starttime="20190114 00:29:57.329" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:57.331" starttime="20190114 00:29:57.330" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.332" starttime="20190114 00:29:57.331" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.335" starttime="20190114 00:29:57.332" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.336" starttime="20190114 00:29:57.335" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+<arg>201</arg>
+</arguments>
+<status endtime="20190114 00:29:57.337" starttime="20190114 00:29:57.336" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+<arg>"id": 2</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:57.337" starttime="20190114 00:29:57.337" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:57.338" starttime="20190114 00:29:56.812" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s2-t2" name="CURL EXAMPLE PART ONE - ROBOT FILE TWO : Send a PATCH request to &quot;body&quot; for jsonplaceholder.typicode.com/posts/2 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X PATCH -H 'Content-Type: application/json' http://${BASE_URL}/posts/2 -d '{"body":"Testing with Robot Framework."}'</arg>
+<arg>alias=curl_robot_file_two_patch</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.341" level="INFO">Starting process:
+curl -i -X PATCH -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/2 -d '{"body":"Testing with Robot Framework."}'</msg>
+<msg timestamp="20190114 00:29:57.346" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:57.953" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:57.953" starttime="20190114 00:29:57.341" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_two_patch</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:57.955" level="INFO">${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 98
+Connection: keep-alive
+Set-Cookie: __cfduid=d748395e055d8220f4396e6ede65bf169154742...</msg>
+<status endtime="20190114 00:29:57.955" starttime="20190114 00:29:57.954" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.956" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:57 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 98
+Connection: keep-alive
+Set-Cookie: __cfduid=d748395e055d8220f4396e6ede65bf1691547425797; expires=Tue, 14-Jan-20 00:29:57 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"62-UW4wpSJRP5nWBZfFItRF4lSEyiI"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdc19336c2ba-FRA
+
+{
+  "userId": 1,
+  "id": 2,
+  "title": "qui est esse",
+  "body": "Testing with Robot Framework."
+}</msg>
+<status endtime="20190114 00:29:57.956" starttime="20190114 00:29:57.956" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.957" starttime="20190114 00:29:57.956" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.962" starttime="20190114 00:29:57.958" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.963" starttime="20190114 00:29:57.962" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:57.964" starttime="20190114 00:29:57.963" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.965" starttime="20190114 00:29:57.965" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.967" starttime="20190114 00:29:57.966" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:57.967" starttime="20190114 00:29:57.967" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:57.968" starttime="20190114 00:29:57.968" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PATCH_RESPONSE}</arg>
+<arg>"body": "Testing with Robot Framework."</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:57.969" starttime="20190114 00:29:57.968" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:57.969" starttime="20190114 00:29:57.339" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s2-t3" name="CURL EXAMPLE PART ONE - ROBOT FILE TWO : Send a GET request to jsonplaceholder.typicode.com/posts/2 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -H 'Content-Type: application/json' http://${BASE_URL}/posts/2</arg>
+<arg>alias=curl_robot_file_two_get</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:57.973" level="INFO">Starting process:
+curl -i -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/2</msg>
+<msg timestamp="20190114 00:29:57.977" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:58.381" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:58.382" starttime="20190114 00:29:57.972" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_two_get</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:58.383" level="INFO">${CURL_ROBOT_FILE_TWO_GET_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 278
+Connection: keep-alive
+Set-Cookie: __cfduid=d3f992e3efdbe2e1ba0447202a294e4c615474...</msg>
+<status endtime="20190114 00:29:58.383" starttime="20190114 00:29:58.382" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.384" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 278
+Connection: keep-alive
+Set-Cookie: __cfduid=d3f992e3efdbe2e1ba0447202a294e4c61547425798; expires=Tue, 14-Jan-20 00:29:58 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: public, max-age=14400
+Pragma: no-cache
+Expires: Mon, 14 Jan 2019 04:29:58 GMT
+X-Content-Type-Options: nosniff
+Etag: W/"116-jnDuMpjju89+9j7e0BqkdFsVRjs"
+Via: 1.1 vegur
+CF-Cache-Status: REVALIDATED
+Accept-Ranges: bytes
+Server: cloudflare
+CF-RAY: 498bfdc58367c2ab-FRA
+
+{
+  "userId": 1,
+  "id": 2,
+  "title": "qui est esse",
+  "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+}</msg>
+<status endtime="20190114 00:29:58.384" starttime="20190114 00:29:58.384" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.386" starttime="20190114 00:29:58.385" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.387" starttime="20190114 00:29:58.386" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.389" starttime="20190114 00:29:58.388" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:58.390" starttime="20190114 00:29:58.389" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.391" starttime="20190114 00:29:58.390" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.392" starttime="20190114 00:29:58.391" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.393" starttime="20190114 00:29:58.392" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:58.394" starttime="20190114 00:29:58.393" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+<arg>"id": 2</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.394" starttime="20190114 00:29:58.394" status="PASS"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+<arg>Testing with Robot Framework</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.395" starttime="20190114 00:29:58.394" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:58.395" starttime="20190114 00:29:57.970" critical="yes" status="PASS"></status>
+</test>
+<test id="s1-s2-t4" name="CURL EXAMPLE PART ONE - ROBOT FILE TWO : Send a DELETE request to jsonplaceholder.typicode.com/posts/2 and check the response.">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>curl -i -X DELETE -H 'Content-Type: application/json' http://${BASE_URL}/posts/2</arg>
+<arg>alias=curl_robot_file_two_delete</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.399" level="INFO">Starting process:
+curl -i -X DELETE -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/2</msg>
+<msg timestamp="20190114 00:29:58.403" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190114 00:29:58.909" level="INFO">Process completed.</msg>
+<status endtime="20190114 00:29:58.910" starttime="20190114 00:29:58.398" status="PASS"></status>
+</kw>
+<kw name="Get Process Result" library="Process">
+<doc>Returns the specified `result object` or some of its attributes.</doc>
+<arguments>
+<arg>curl_robot_file_two_delete</arg>
+<arg>stdout=true</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</var>
+</assign>
+<msg timestamp="20190114 00:29:58.911" level="INFO">${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE} = HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Set-Cookie: __cfduid=dc7557fa2696a97424e3a5b052e637f681547425...</msg>
+<status endtime="20190114 00:29:58.912" starttime="20190114 00:29:58.910" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+</arguments>
+<msg timestamp="20190114 00:29:58.912" level="INFO">HTTP/1.1 200 OK
+Date: Mon, 14 Jan 2019 00:29:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Set-Cookie: __cfduid=dc7557fa2696a97424e3a5b052e637f681547425798; expires=Tue, 14-Jan-20 00:29:58 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 498bfdc820d1647b-FRA
+
+{}</msg>
+<status endtime="20190114 00:29:58.913" starttime="20190114 00:29:58.912" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.914" starttime="20190114 00:29:58.913" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.915" starttime="20190114 00:29:58.914" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.916" starttime="20190114 00:29:58.915" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+</arguments>
+<status endtime="20190114 00:29:58.917" starttime="20190114 00:29:58.916" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.918" starttime="20190114 00:29:58.917" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.919" starttime="20190114 00:29:58.918" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status endtime="20190114 00:29:58.920" starttime="20190114 00:29:58.919" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+<arg>200</arg>
+</arguments>
+<status endtime="20190114 00:29:58.921" starttime="20190114 00:29:58.920" status="PASS"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+<arg>{}</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.921" starttime="20190114 00:29:58.921" status="PASS"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+<arg>"id": 2</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status endtime="20190114 00:29:58.922" starttime="20190114 00:29:58.922" status="PASS"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status endtime="20190114 00:29:58.922" starttime="20190114 00:29:58.396" critical="yes" status="PASS"></status>
+</test>
+<doc>In a hypothetical scenario, where you are split between 3 or more frequently changing projects. Several of them are maybe, days, weeks or months past their delivery date.
+You are brought in to quickly learn everything about the project and set up basic regression tests touching all of the high risk areas, running in the CI pipeline in less than 10 working
+days (ideally they want it in probably 5 days or less). This might be a situation where people are relying on various types of tools to test things out and quickly explore system behavior,
+maybe there are dozens of cURL one-liners being shared by the developers...</doc>
+<status endtime="20190114 00:29:58.924" starttime="20190114 00:29:56.797" status="PASS"></status>
+</suite>
+<status endtime="20190114 00:29:58.928" starttime="20190114 00:29:56.751" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="8">Regression_Tests</stat>
+<stat fail="0" pass="8">Unrefined_And_Created_In_A_Hurry</stat>
+</tag>
+<suite>
+<stat fail="0" pass="8" id="s1" name="Robot Framework test run with cURL in parallel">Robot Framework test run with cURL in parallel</stat>
+<stat fail="0" pass="4" id="s1-s1" name="Docker-Example-Curl1">Robot Framework test run with cURL in parallel.Docker-Example-Curl1</stat>
+<stat fail="0" pass="4" id="s1-s2" name="Docker-Example-Curl2">Robot Framework test run with cURL in parallel.Docker-Example-Curl2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
