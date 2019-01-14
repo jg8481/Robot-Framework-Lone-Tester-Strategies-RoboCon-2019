@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190113 23:48:39.990" generator="Rebot 3.0.4 (Python 2.7.10 on darwin)">
+<robot generated="20190113 23:48:57.917" generator="Rebot 3.0.4 (Python 2.7.10 on darwin)">
 <suite id="s1" name="Combined Results Dashboard - ">
 <suite source="/Users/joshuagorospe/Yardarm/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/Workshop-Examples/Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Hyrid-Session-Based-Test-Example-For-Desktop.robot" id="s1-s1" name="Josh tested Jira Task Number 786864 in the QA environment -- GitHub Pull Rquest Number 3456773 was deployed to that environment -- Session-Based Test number 2 for 01-13-2019 03:41 PM on Desktop -- ">
 <test id="s1-s1-t1" name="SESSION-BASED TEST SETUP - DESKTOP (OR LAPTOP) : Set up this testing session and collect some information from the tester.">
