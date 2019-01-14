@@ -10,14 +10,15 @@ In addition to the current requirements in the workshop bio, the following are o
 - a Slack account (preferably one under your control)
 - RobotFramework-Metrics -> https://github.com/adiralashiva8/robotframework-metrics
 
-Before the workshop, please run the following on your machine. This will require Docker.
-
+Before the workshop, please run the following on your machine. 
 ```
 git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019.git
 cd ./Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
+```
+Set up an `.env` file using the provided `template.env` file. After setting up your `.env` file you can run the following, but it will require Docker on your machine.
+```
 sh ./start-specific-docker-example-workflows-for-workshop.sh Build-Docker-Container
 ```
-Also please set up a `.env` file using the provided `template.env` file.
 
 ## Workshop Examples
 
