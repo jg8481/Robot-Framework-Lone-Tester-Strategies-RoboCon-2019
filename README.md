@@ -4,7 +4,6 @@
 
 This repo contains all of the examples that will be covered in the "Robot Framework strategies for the lone tester" workshop. More information about this RoboCon 2019 workshop can be found here... https://robocon.io/#workshops
 
-
 In addition to the current requirements in the workshop bio, the following are optional requirements that you need for the new bonus content that is not mentioned in the original bio...
 
 - yEd Graph Editor -> https://www.yworks.com/products/yed
@@ -15,11 +14,10 @@ Before the workshop, please run the following on your machine. This will require
 
 ```
 git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019.git
-cd /Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
+cd ./Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
 sh ./start-specific-docker-example-workflows-for-workshop.sh Build-Docker-Container
-
 ```
-Also set up a `.env` file using the provided `template.env` file.
+Also please set up a `.env` file using the provided `template.env` file.
 
 ## Workshop Examples
 
@@ -54,11 +52,10 @@ There will be presentation slides explaining the following in more detail and I 
 ./start-specific-result-gathering-example-workflows-for-workshop.sh Metrics-Dashboard-Workshop-Example
 ```
 
-
 If you have a Windows operating system, the following options may work for you...
 - Consider downloading Git for Windows -> https://git-scm.com/download/win and https://gitforwindows.org/
 - Windows 10 users may already have Bash -> http://techgenix.com/bash-on-windows-10/
-- Since you will probably already have docker-compose installed you can copy the commands and run them individually
+- Since you will probably already have docker-compose installed you can copy the commands and run them individually.
 
 ***
 
