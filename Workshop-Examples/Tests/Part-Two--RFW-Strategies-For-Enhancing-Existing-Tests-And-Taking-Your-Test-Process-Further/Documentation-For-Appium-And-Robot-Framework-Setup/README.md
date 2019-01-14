@@ -1,4 +1,4 @@
-# Hyrid SBTM With Mobile Device (Android) And Robot Framework
+# Hyrid SBTM with a mobile device (Android) and Robot Framework
 
 The `Hyrid-Session-Based-Test-Tool-For-Android.robot` requires a basic understanding of Robot Framework, mobile device testing, and exploratory testing. **The following setup steps must be performed on your machine BEFORE running `Hyrid-Session-Based-Test-Tool-For-Android.robot`.**
 

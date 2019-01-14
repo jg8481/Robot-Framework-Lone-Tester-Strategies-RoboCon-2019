@@ -1,4 +1,4 @@
-# Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
+# Robot Framework strategies for the lone tester - RoboCon 2019
 
 ## General Information
 
@@ -10,7 +10,7 @@ In addition to the current requirements in the workshop bio, the following are o
 - a Slack account (preferably one under your control)
 - RobotFramework-Metrics -> https://github.com/adiralashiva8/robotframework-metrics
 
-Before the workshop, please run the following on your machine. 
+Before the workshop, please run the following on your machine.
 ```
 git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019.git
 cd ./Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
