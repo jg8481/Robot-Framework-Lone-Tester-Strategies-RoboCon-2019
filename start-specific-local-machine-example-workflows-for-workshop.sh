@@ -180,5 +180,3 @@ if [ "$1" == "Appium-Teardown" ]; then
   ps -A | grep appium | xargs kill -s kill &>/dev/null
   ps -A | grep selenium | xargs kill -s kill &>/dev/null
 fi
-
-exit

@@ -279,5 +279,3 @@ if [ "$1" == "Previous-Short-Graphwalker-Run-Workshop-Example" ]; then
   TIMESTAMP2=$(date)
   echo "This test run ended on $TIMESTAMP2."
 fi
-
-exit

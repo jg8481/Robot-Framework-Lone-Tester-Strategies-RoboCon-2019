@@ -59,5 +59,3 @@ if [ "$1" == "Delete-All-Results-Files" ]; then
   rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/RobotFramework-Metrics-Results/*.html
   rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/Graphwalker-Model-Based-Test-Results/*.html
 fi
-
-exit
