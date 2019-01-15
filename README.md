@@ -67,7 +67,7 @@ If you have a Windows operating system, the following options may work for you..
 
 ***
 
-### Big thank you to the following people and groups.
+## Big thank you to the following people and groups.
 
 - Pekka Klarck
 - Ed Manlove
