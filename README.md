@@ -10,6 +10,13 @@ In addition to the current requirements in the workshop bio, the following are o
 - a Slack account (preferably one under your control)
 - RobotFramework-Metrics -> https://github.com/adiralashiva8/robotframework-metrics
 
+Bonus Content: There are some possibly interesting extras in the repo that I did not mention in the original Papercall. They are...
+- Dockerized parallel and serial randomized tests, with results merging.
+- Options for generating randomized test data using builtin keywords or malformed test data with the well known Radamsa general purpose fuzzing tool.
+- Several examples of Slack notification keywords running in hybrid-manual-automated tests and in Dockerized tests
+- Graphwalker examples with replayable test runs, while running a slow internet connection proxy called "Crapify" (<- hahaha that is the actual name of the proxy tool)
+- Dashboard of Session Based Test Management using Shiva Prasad Adirala's excellent RobotFramework-Metrics project, https://github.com/adiralashiva8/robotframework-metrics
+
 Before the workshop, please run the following on your machine.
 ```
 git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019.git
