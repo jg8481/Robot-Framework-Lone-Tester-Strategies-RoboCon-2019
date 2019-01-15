@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190114 15:34:47.238" generator="Robot 3.1.1 (Python 3.5.6 on linux)" rpa="false">
-<suite id="s1" name="Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial" source="/rfw/Tests/Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects/Docker-Example-Postman-Newman.robot">
-<test id="s1-t1" name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a POST request to jsonplaceholder.typicode.com/posts and check the response.">
+<robot rpa="false" generated="20190115 16:46:42.047" generator="Robot 3.1.1 (Python 3.5.6 on linux)">
+<suite name="Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial" source="/rfw/Tests/Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects/Docker-Example-Postman-Newman.robot" id="s1">
+<test name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a POST request to jsonplaceholder.typicode.com/posts and check the response." id="s1-t1">
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
 <arguments>
@@ -11,11 +11,11 @@
 <arg>timeout=20s</arg>
 <arg>on_timeout=continue</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:47.299">Starting process:
+<msg timestamp="20190115 16:46:42.100" level="INFO">Starting process:
 newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects//Resources//jsonplaceholder.typicode.com.postman_collection.json --folder 'Send POST to jsonplaceholder.typicode.com' --reporter-cli-no-summary --color off --reporter-cli-no-console</msg>
-<msg level="INFO" timestamp="20190114 15:34:47.304">Waiting for process to complete.</msg>
-<msg level="INFO" timestamp="20190114 15:34:50.243">Process completed.</msg>
-<status starttime="20190114 15:34:47.297" status="PASS" endtime="20190114 15:34:50.243"></status>
+<msg timestamp="20190115 16:46:42.104" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190115 16:46:44.336" level="INFO">Process completed.</msg>
+<status endtime="20190115 16:46:44.336" status="PASS" starttime="20190115 16:46:42.099"></status>
 </kw>
 <kw name="Get Process Result" library="Process">
 <doc>Returns the specified `result object` or some of its attributes.</doc>
@@ -26,75 +26,75 @@ newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adaptin
 <assign>
 <var>${POSTMAN_POST_RESPONSE}</var>
 </assign>
-<msg level="INFO" timestamp="20190114 15:34:50.246">${POSTMAN_POST_RESPONSE} = newman
+<msg timestamp="20190115 16:46:44.338" level="INFO">${POSTMAN_POST_RESPONSE} = newman
 
 jsonplaceholder.typicode.com
 
 → Send POST to jsonplaceholder.typicode.com
-  POST https://jsonplaceholder.typicode.com/posts [201 Created, 822B, 878ms]</msg>
-<status starttime="20190114 15:34:50.245" status="PASS" endtime="20190114 15:34:50.246"></status>
+  POST https://jsonplaceholder.typicode.com/posts [201 Created, 822B, 612ms]</msg>
+<status endtime="20190115 16:46:44.338" status="PASS" starttime="20190115 16:46:44.337"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${POSTMAN_POST_RESPONSE}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:50.247">newman
+<msg timestamp="20190115 16:46:44.339" level="INFO">newman
 
 jsonplaceholder.typicode.com
 
 → Send POST to jsonplaceholder.typicode.com
-  POST https://jsonplaceholder.typicode.com/posts [201 Created, 822B, 878ms]</msg>
-<status starttime="20190114 15:34:50.246" status="PASS" endtime="20190114 15:34:50.247"></status>
+  POST https://jsonplaceholder.typicode.com/posts [201 Created, 822B, 612ms]</msg>
+<status endtime="20190115 16:46:44.339" status="PASS" starttime="20190115 16:46:44.339"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.247" status="PASS" endtime="20190114 15:34:50.248"></status>
+<status endtime="20190115 16:46:44.340" status="PASS" starttime="20190115 16:46:44.339"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.249" status="PASS" endtime="20190114 15:34:50.249"></status>
+<status endtime="20190115 16:46:44.341" status="PASS" starttime="20190115 16:46:44.340"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.250" status="PASS" endtime="20190114 15:34:50.252"></status>
+<status endtime="20190115 16:46:44.342" status="PASS" starttime="20190115 16:46:44.341"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${POSTMAN_POST_RESPONSE}</arg>
 </arguments>
-<status starttime="20190114 15:34:50.252" status="PASS" endtime="20190114 15:34:50.253"></status>
+<status endtime="20190115 16:46:44.342" status="PASS" starttime="20190115 16:46:44.342"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.254" status="PASS" endtime="20190114 15:34:50.254"></status>
+<status endtime="20190115 16:46:44.343" status="PASS" starttime="20190115 16:46:44.343"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.255" status="PASS" endtime="20190114 15:34:50.256"></status>
+<status endtime="20190115 16:46:44.344" status="PASS" starttime="20190115 16:46:44.343"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:50.256" status="PASS" endtime="20190114 15:34:50.256"></status>
+<status endtime="20190115 16:46:44.344" status="PASS" starttime="20190115 16:46:44.344"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -102,15 +102,15 @@ jsonplaceholder.typicode.com
 <arg>${POSTMAN_POST_RESPONSE}</arg>
 <arg>201 Created</arg>
 </arguments>
-<status starttime="20190114 15:34:50.257" status="PASS" endtime="20190114 15:34:50.257"></status>
+<status endtime="20190115 16:46:44.345" status="PASS" starttime="20190115 16:46:44.345"></status>
 </kw>
 <tags>
 <tag>Regression_Tests</tag>
 <tag>Unrefined_And_Created_In_A_Hurry</tag>
 </tags>
-<status starttime="20190114 15:34:47.295" status="PASS" endtime="20190114 15:34:50.258" critical="yes"></status>
+<status critical="yes" endtime="20190115 16:46:44.346" status="PASS" starttime="20190115 16:46:42.098"></status>
 </test>
-<test id="s1-t2" name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a PATCH request to &quot;title&quot; for jsonplaceholder.typicode.com/posts/1 and check the response.">
+<test name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a PATCH request to &quot;title&quot; for jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-t2">
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
 <arguments>
@@ -120,11 +120,11 @@ jsonplaceholder.typicode.com
 <arg>timeout=20s</arg>
 <arg>on_timeout=continue</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:50.261">Starting process:
+<msg timestamp="20190115 16:46:44.349" level="INFO">Starting process:
 newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects//Resources//jsonplaceholder.typicode.com.postman_collection.json --folder 'Send PATCH to jsonplaceholder.typicode.com' --reporter-cli-no-summary --color off --reporter-cli-no-console</msg>
-<msg level="INFO" timestamp="20190114 15:34:50.265">Waiting for process to complete.</msg>
-<msg level="INFO" timestamp="20190114 15:34:52.789">Process completed.</msg>
-<status starttime="20190114 15:34:50.260" status="PASS" endtime="20190114 15:34:52.789"></status>
+<msg timestamp="20190115 16:46:44.353" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190115 16:46:46.684" level="INFO">Process completed.</msg>
+<status endtime="20190115 16:46:46.684" status="PASS" starttime="20190115 16:46:44.348"></status>
 </kw>
 <kw name="Get Process Result" library="Process">
 <doc>Returns the specified `result object` or some of its attributes.</doc>
@@ -135,75 +135,75 @@ newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adaptin
 <assign>
 <var>${POSTMAN_PATCH_RESPONSE}</var>
 </assign>
-<msg level="INFO" timestamp="20190114 15:34:52.792">${POSTMAN_PATCH_RESPONSE} = newman
+<msg timestamp="20190115 16:46:46.690" level="INFO">${POSTMAN_PATCH_RESPONSE} = newman
 
 jsonplaceholder.typicode.com
 
 → Send PATCH to jsonplaceholder.typicode.com
-  PATCH https://jsonplaceholder.typicode.com/posts/1 [200 OK, 960B, 554ms]</msg>
-<status starttime="20190114 15:34:52.791" status="PASS" endtime="20190114 15:34:52.792"></status>
+  PATCH https://jsonplaceholder.typicode.com/posts/1 [200 OK, 960B, 654ms]</msg>
+<status endtime="20190115 16:46:46.691" status="PASS" starttime="20190115 16:46:46.687"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${POSTMAN_PATCH_RESPONSE}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:52.793">newman
+<msg timestamp="20190115 16:46:46.693" level="INFO">newman
 
 jsonplaceholder.typicode.com
 
 → Send PATCH to jsonplaceholder.typicode.com
-  PATCH https://jsonplaceholder.typicode.com/posts/1 [200 OK, 960B, 554ms]</msg>
-<status starttime="20190114 15:34:52.792" status="PASS" endtime="20190114 15:34:52.793"></status>
+  PATCH https://jsonplaceholder.typicode.com/posts/1 [200 OK, 960B, 654ms]</msg>
+<status endtime="20190115 16:46:46.693" status="PASS" starttime="20190115 16:46:46.692"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.794" status="PASS" endtime="20190114 15:34:52.794"></status>
+<status endtime="20190115 16:46:46.694" status="PASS" starttime="20190115 16:46:46.694"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.795" status="PASS" endtime="20190114 15:34:52.796"></status>
+<status endtime="20190115 16:46:46.696" status="PASS" starttime="20190115 16:46:46.695"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.796" status="PASS" endtime="20190114 15:34:52.796"></status>
+<status endtime="20190115 16:46:46.696" status="PASS" starttime="20190115 16:46:46.696"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${POSTMAN_PATCH_RESPONSE}</arg>
 </arguments>
-<status starttime="20190114 15:34:52.797" status="PASS" endtime="20190114 15:34:52.797"></status>
+<status endtime="20190115 16:46:46.697" status="PASS" starttime="20190115 16:46:46.697"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.797" status="PASS" endtime="20190114 15:34:52.798"></status>
+<status endtime="20190115 16:46:46.698" status="PASS" starttime="20190115 16:46:46.698"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.799" status="PASS" endtime="20190114 15:34:52.799"></status>
+<status endtime="20190115 16:46:46.699" status="PASS" starttime="20190115 16:46:46.698"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:52.799" status="PASS" endtime="20190114 15:34:52.800"></status>
+<status endtime="20190115 16:46:46.700" status="PASS" starttime="20190115 16:46:46.699"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -211,15 +211,15 @@ jsonplaceholder.typicode.com
 <arg>${POSTMAN_PATCH_RESPONSE}</arg>
 <arg>200 OK</arg>
 </arguments>
-<status starttime="20190114 15:34:52.800" status="PASS" endtime="20190114 15:34:52.801"></status>
+<status endtime="20190115 16:46:46.701" status="PASS" starttime="20190115 16:46:46.700"></status>
 </kw>
 <tags>
 <tag>Regression_Tests</tag>
 <tag>Unrefined_And_Created_In_A_Hurry</tag>
 </tags>
-<status starttime="20190114 15:34:50.259" status="PASS" endtime="20190114 15:34:52.801" critical="yes"></status>
+<status critical="yes" endtime="20190115 16:46:46.701" status="PASS" starttime="20190115 16:46:44.346"></status>
 </test>
-<test id="s1-t3" name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a GET request to jsonplaceholder.typicode.com/posts/1 and check the response.">
+<test name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a GET request to jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-t3">
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
 <arguments>
@@ -229,11 +229,11 @@ jsonplaceholder.typicode.com
 <arg>timeout=20s</arg>
 <arg>on_timeout=continue</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:52.804">Starting process:
+<msg timestamp="20190115 16:46:46.704" level="INFO">Starting process:
 newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects//Resources//jsonplaceholder.typicode.com.postman_collection.json --folder 'Send GET to jsonplaceholder.typicode.com' --reporter-cli-no-summary --color off --reporter-cli-no-console</msg>
-<msg level="INFO" timestamp="20190114 15:34:52.810">Waiting for process to complete.</msg>
-<msg level="INFO" timestamp="20190114 15:34:55.035">Process completed.</msg>
-<status starttime="20190114 15:34:52.803" status="PASS" endtime="20190114 15:34:55.035"></status>
+<msg timestamp="20190115 16:46:46.708" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190115 16:46:48.533" level="INFO">Process completed.</msg>
+<status endtime="20190115 16:46:48.533" status="PASS" starttime="20190115 16:46:46.703"></status>
 </kw>
 <kw name="Get Process Result" library="Process">
 <doc>Returns the specified `result object` or some of its attributes.</doc>
@@ -244,75 +244,75 @@ newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adaptin
 <assign>
 <var>${POSTMAN_GET_RESPONSE}</var>
 </assign>
-<msg level="INFO" timestamp="20190114 15:34:55.038">${POSTMAN_GET_RESPONSE} = newman
+<msg timestamp="20190115 16:46:48.535" level="INFO">${POSTMAN_GET_RESPONSE} = newman
 
 jsonplaceholder.typicode.com
 
 → Send GET to jsonplaceholder.typicode.com
-  GET https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.04KB, 240ms]</msg>
-<status starttime="20190114 15:34:55.036" status="PASS" endtime="20190114 15:34:55.038"></status>
+  GET https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.04KB, 236ms]</msg>
+<status endtime="20190115 16:46:48.535" status="PASS" starttime="20190115 16:46:48.534"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${POSTMAN_GET_RESPONSE}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:55.039">newman
+<msg timestamp="20190115 16:46:48.536" level="INFO">newman
 
 jsonplaceholder.typicode.com
 
 → Send GET to jsonplaceholder.typicode.com
-  GET https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.04KB, 240ms]</msg>
-<status starttime="20190114 15:34:55.038" status="PASS" endtime="20190114 15:34:55.039"></status>
+  GET https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.04KB, 236ms]</msg>
+<status endtime="20190115 16:46:48.536" status="PASS" starttime="20190115 16:46:48.536"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.039" status="PASS" endtime="20190114 15:34:55.040"></status>
+<status endtime="20190115 16:46:48.537" status="PASS" starttime="20190115 16:46:48.537"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.040" status="PASS" endtime="20190114 15:34:55.041"></status>
+<status endtime="20190115 16:46:48.538" status="PASS" starttime="20190115 16:46:48.538"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.042" status="PASS" endtime="20190114 15:34:55.042"></status>
+<status endtime="20190115 16:46:48.539" status="PASS" starttime="20190115 16:46:48.539"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${POSTMAN_GET_RESPONSE}</arg>
 </arguments>
-<status starttime="20190114 15:34:55.042" status="PASS" endtime="20190114 15:34:55.043"></status>
+<status endtime="20190115 16:46:48.540" status="PASS" starttime="20190115 16:46:48.540"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.044" status="PASS" endtime="20190114 15:34:55.044"></status>
+<status endtime="20190115 16:46:48.541" status="PASS" starttime="20190115 16:46:48.541"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.044" status="PASS" endtime="20190114 15:34:55.045"></status>
+<status endtime="20190115 16:46:48.542" status="PASS" starttime="20190115 16:46:48.542"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:55.046" status="PASS" endtime="20190114 15:34:55.046"></status>
+<status endtime="20190115 16:46:48.543" status="PASS" starttime="20190115 16:46:48.543"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -320,15 +320,15 @@ jsonplaceholder.typicode.com
 <arg>${POSTMAN_GET_RESPONSE}</arg>
 <arg>200 OK</arg>
 </arguments>
-<status starttime="20190114 15:34:55.047" status="PASS" endtime="20190114 15:34:55.047"></status>
+<status endtime="20190115 16:46:48.544" status="PASS" starttime="20190115 16:46:48.544"></status>
 </kw>
 <tags>
 <tag>Regression_Tests</tag>
 <tag>Unrefined_And_Created_In_A_Hurry</tag>
 </tags>
-<status starttime="20190114 15:34:52.802" status="PASS" endtime="20190114 15:34:55.048" critical="yes"></status>
+<status critical="yes" endtime="20190115 16:46:48.545" status="PASS" starttime="20190115 16:46:46.702"></status>
 </test>
-<test id="s1-t4" name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a DELETE request to jsonplaceholder.typicode.com/posts/1 and check the response.">
+<test name="POSTMAN NEWMAN COLLECTION EXAMPLE PART ONE : Send a DELETE request to jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-t4">
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
 <arguments>
@@ -338,11 +338,11 @@ jsonplaceholder.typicode.com
 <arg>timeout=20s</arg>
 <arg>on_timeout=continue</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:55.050">Starting process:
+<msg timestamp="20190115 16:46:48.548" level="INFO">Starting process:
 newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects//Resources//jsonplaceholder.typicode.com.postman_collection.json --folder 'Send DELETE to jsonplaceholder.typicode.com' --reporter-cli-no-summary --color off --reporter-cli-no-console</msg>
-<msg level="INFO" timestamp="20190114 15:34:55.056">Waiting for process to complete.</msg>
-<msg level="INFO" timestamp="20190114 15:34:58.101">Process completed.</msg>
-<status starttime="20190114 15:34:55.050" status="PASS" endtime="20190114 15:34:58.101"></status>
+<msg timestamp="20190115 16:46:48.551" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190115 16:46:50.782" level="INFO">Process completed.</msg>
+<status endtime="20190115 16:46:50.782" status="PASS" starttime="20190115 16:46:48.547"></status>
 </kw>
 <kw name="Get Process Result" library="Process">
 <doc>Returns the specified `result object` or some of its attributes.</doc>
@@ -353,75 +353,75 @@ newman run /rfw//Tests//Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adaptin
 <assign>
 <var>${POSTMAN_DELETE_RESPONSE}</var>
 </assign>
-<msg level="INFO" timestamp="20190114 15:34:58.104">${POSTMAN_DELETE_RESPONSE} = newman
+<msg timestamp="20190115 16:46:50.784" level="INFO">${POSTMAN_DELETE_RESPONSE} = newman
 
 jsonplaceholder.typicode.com
 
 → Send DELETE to jsonplaceholder.typicode.com
-  DELETE https://jsonplaceholder.typicode.com/posts/1 [200 OK, 681B, 1114ms]</msg>
-<status starttime="20190114 15:34:58.102" status="PASS" endtime="20190114 15:34:58.104"></status>
+  DELETE https://jsonplaceholder.typicode.com/posts/1 [200 OK, 681B, 562ms]</msg>
+<status endtime="20190115 16:46:50.784" status="PASS" starttime="20190115 16:46:50.783"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${POSTMAN_DELETE_RESPONSE}</arg>
 </arguments>
-<msg level="INFO" timestamp="20190114 15:34:58.105">newman
+<msg timestamp="20190115 16:46:50.786" level="INFO">newman
 
 jsonplaceholder.typicode.com
 
 → Send DELETE to jsonplaceholder.typicode.com
-  DELETE https://jsonplaceholder.typicode.com/posts/1 [200 OK, 681B, 1114ms]</msg>
-<status starttime="20190114 15:34:58.104" status="PASS" endtime="20190114 15:34:58.105"></status>
+  DELETE https://jsonplaceholder.typicode.com/posts/1 [200 OK, 681B, 562ms]</msg>
+<status endtime="20190115 16:46:50.786" status="PASS" starttime="20190115 16:46:50.785"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.105" status="PASS" endtime="20190114 15:34:58.106"></status>
+<status endtime="20190115 16:46:50.787" status="PASS" starttime="20190115 16:46:50.786"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.107" status="PASS" endtime="20190114 15:34:58.107"></status>
+<status endtime="20190115 16:46:50.788" status="PASS" starttime="20190115 16:46:50.787"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.108" status="PASS" endtime="20190114 15:34:58.109"></status>
+<status endtime="20190115 16:46:50.789" status="PASS" starttime="20190115 16:46:50.788"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${POSTMAN_DELETE_RESPONSE}</arg>
 </arguments>
-<status starttime="20190114 15:34:58.109" status="PASS" endtime="20190114 15:34:58.110"></status>
+<status endtime="20190115 16:46:50.790" status="PASS" starttime="20190115 16:46:50.789"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.110" status="PASS" endtime="20190114 15:34:58.111"></status>
+<status endtime="20190115 16:46:50.791" status="PASS" starttime="20190115 16:46:50.790"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.111" status="PASS" endtime="20190114 15:34:58.112"></status>
+<status endtime="20190115 16:46:50.792" status="PASS" starttime="20190115 16:46:50.791"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status starttime="20190114 15:34:58.112" status="PASS" endtime="20190114 15:34:58.113"></status>
+<status endtime="20190115 16:46:50.793" status="PASS" starttime="20190115 16:46:50.792"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -429,19 +429,19 @@ jsonplaceholder.typicode.com
 <arg>${POSTMAN_DELETE_RESPONSE}</arg>
 <arg>200 OK</arg>
 </arguments>
-<status starttime="20190114 15:34:58.113" status="PASS" endtime="20190114 15:34:58.114"></status>
+<status endtime="20190115 16:46:50.794" status="PASS" starttime="20190115 16:46:50.793"></status>
 </kw>
 <tags>
 <tag>Regression_Tests</tag>
 <tag>Unrefined_And_Created_In_A_Hurry</tag>
 </tags>
-<status starttime="20190114 15:34:55.048" status="PASS" endtime="20190114 15:34:58.114" critical="yes"></status>
+<status critical="yes" endtime="20190115 16:46:50.794" status="PASS" starttime="20190115 16:46:48.546"></status>
 </test>
 <doc>In a hypothetical scenario, where you are split between 3 or more frequently changing projects. Several of them are maybe, days, weeks or months past their delivery date.
 You are brought in to quickly learn everything about the project and set up basic regression tests touching all of the high risk areas, running in the CI pipeline in less than 10 working
 days (ideally they want it in probably 5 days or less). This might be a situation where people are relying on various types of tools to test things out and quickly explore system behavior,
 maybe all of the developers like using Postman (with Newman) and are sharing a single Postman Collection that keeps growing bigger every day. This example is enhanced in Part Two...</doc>
-<status starttime="20190114 15:34:47.241" status="PASS" endtime="20190114 15:34:58.116"></status>
+<status endtime="20190115 16:46:50.796" status="PASS" starttime="20190115 16:46:42.049"></status>
 </suite>
 <statistics>
 <total>
@@ -453,7 +453,7 @@ maybe all of the developers like using Postman (with Newman) and are sharing a s
 <stat fail="0" pass="4">Unrefined_And_Created_In_A_Hurry</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial" pass="4">Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial</stat>
+<stat name="Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial" fail="0" id="s1" pass="4">Robot Framework test run with a Postman Newman Collection running one Postman Folder at a time in serial</stat>
 </suite>
 </statistics>
 <errors>

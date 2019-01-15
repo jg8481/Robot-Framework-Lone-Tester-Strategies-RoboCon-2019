@@ -14,7 +14,6 @@ services:
       - URL2=${URL2}
       - URL3=${URL3}
       - BASE_URL=${BASE_URL}
-      #- MALFORMED_TEST_DATA=${MALFORMED_TEST_DATA}
       - webhook_url=${webhook_url}
       - upload_token=${upload_token}
       - channel=${channel}
