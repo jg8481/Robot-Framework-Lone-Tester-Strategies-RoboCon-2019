@@ -60,6 +60,12 @@ There will be presentation slides explaining the following in more detail and I 
 ./start-specific-result-gathering-example-workflows-for-workshop.sh Metrics-Dashboard-Workshop-Example
 ```
 
+Part Three of the workshop discussed the following dashboards.
+- https://robocon2019-workshop-dashboard.herokuapp.com/
+- https://robocon2019-sbtm-dashboard.herokuapp.com/
+- https://joshua-gorospe-qa-dashboard2.herokuapp.com/
+
+
 If you have a Windows operating system, the following options may work for you...
 - Consider downloading Git for Windows -> https://git-scm.com/download/win and https://gitforwindows.org/
 - Windows 10 users may already have Bash -> http://techgenix.com/bash-on-windows-10/
