@@ -341,8 +341,8 @@ if [ "$1" == "All-Tests-Passed-Do-Long-Graphwalker-Run" ]; then
   echo
   while IFS=, read -r GRAPHWALKER
   do
-    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output long-graphwalker-run-ouput.xml --log long-graphwalker-run.html --timestampoutputs -N "Robot Framework test run with Graphwalker model generated test sequence from the LongGraphwalkerPath.csv file" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
-    sleep 2
+    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output long-graphwalker-run-ouput.xml --log long-graphwalker-run.html --timestampoutputs -N "${GRAPHWALKER}" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
+    sleep 0.5s
   done < ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/LongGraphwalkerPath.csv
   ## The following output merge did not generate the .xml or .html files I was expecting...
   ## rebot --suitestatlevel 1 -N "Robot Framework test run with Graphwalker model generated test sequence from the LongGraphwalkerPath.csv file" --report NONE --log /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/merged-long-graphwalker-run.html --output /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/merged-long-graphwalker-run-ouput.xml --merge /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/long-graphwalker-run-ouput*.xml
@@ -394,8 +394,8 @@ if [ "$1" == "Some-Tests-Failed-Do-Short-Graphwalker-Run" ]; then
   echo
   while IFS=, read -r GRAPHWALKER
   do
-    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output short-graphwalker-run-ouput.xml --log short-graphwalker-run.html --timestampoutputs -N "Robot Framework test run with Graphwalker model generated test sequence from the ShortGraphwalkerPath.csv file" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
-    sleep 2
+    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output short-graphwalker-run-ouput.xml --log short-graphwalker-run.html --timestampoutputs -N "${GRAPHWALKER}" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
+    sleep 0.5s
   done < ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/ShortGraphwalkerPath.csv
   ## The following output merge did not generate the .xml or .html files I was expecting...
   ## rebot --report NONE --log /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/short-graphwalker-run.html --output /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/merged-short-graphwalker-run-ouput.xml --merge /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/short-graphwalker-run-ouput*.xml
@@ -435,8 +435,8 @@ if [ "$1" == "Long-Graphwalker-Run-Detected-Errors-Do-Previous-Run" ]; then
   echo
   while IFS=, read -r GRAPHWALKER
   do
-    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output long-graphwalker-reuse-previous-path-file-ouput.xml --log long-graphwalker-reuse-previous-path-file.html --timestampoutputs -N "Robot Framework test run with Graphwalker model generated test sequence using the previous LongGraphwalkerPath.csv file" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
-    sleep 2
+    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output long-graphwalker-reuse-previous-path-file-ouput.xml --log long-graphwalker-reuse-previous-path-file.html --timestampoutputs -N "${GRAPHWALKER}" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
+    sleep 0.5s
   done < ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/LongGraphwalkerPath.csv
   ## The following output merge did not generate the .xml or .html files I was expecting...
   ## rebot --report NONE --log /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/long-graphwalker-run.html --output /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/merged-long-graphwalker-reuse-previous-path-file-ouput.xml --merge /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/long-graphwalker-reuse-previous-path-file-ouput*.xml
@@ -476,8 +476,8 @@ if [ "$1" == "Short-Graphwalker-Run-Detected-Errors-Do-Previous-Run" ]; then
   echo
   while IFS=, read -r GRAPHWALKER
   do
-    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output short-graphwalker-reuse-previous-path-file-ouput.xml --log short-graphwalker-reuse-previous-path-file.html --timestampoutputs -N "Robot Framework test run with Graphwalker model generated test sequence using the previous ShortGraphwalkerPath.csv file" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
-    sleep 2
+    robot --variable GRAPHWALKER:${GRAPHWALKER} --variable BASE_URL:${BASE_URL} --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --include "${GRAPHWALKER}" --report NONE --output short-graphwalker-reuse-previous-path-file-ouput.xml --log short-graphwalker-reuse-previous-path-file.html --timestampoutputs -N "${GRAPHWALKER}" -d ./Part-Three--Combined-Results-Visualizing-Your-Testing-Story/ ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/Docker-Example-Robot-Framework-Graphwalker.robot &&
+    sleep 0.5s
   done < ./Tests/Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further/ShortGraphwalkerPath.csv
   ## The following output merge did not generate the .xml or .html files I was expecting...
   ## rebot --report NONE --log /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/short-graphwalker-reuse-previous-path-file.html --output /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/merged-short-graphwalker-reuse-previous-path-file-ouput.xml --merge /rfw/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/short-graphwalker-reuse-previous-path-file-ouput*.xml
