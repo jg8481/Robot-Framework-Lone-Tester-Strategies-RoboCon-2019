@@ -31,7 +31,7 @@ sh ./start-specific-docker-example-workflows-for-workshop.sh Build-Docker-Contai
 
 There will be presentation slides explaining the following in more detail and I will assist everyone with running them.
 
-1. Part-One--RFW-Strategies-For-Rapidly-Testing-And-Adapting-To-Frequently-Changing-Projects
+1. Workshop-Part-One: Robot Framework strategies for rapidly testing and adapting to frequently changing projects
 ```
 ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Postman-Newman-Workshop-Examples
 ./start-specific-docker-example-workflows-for-workshop.sh Part-One-cURL-Workshop-Examples
@@ -40,7 +40,7 @@ There will be presentation slides explaining the following in more detail and I 
 ./start-specific-docker-example-workflows-for-workshop.sh Part-One-Run-All-Docker-Workshop-Examples
 ```
 
-2. Part-Two--RFW-Strategies-For-Enhancing-Existing-Tests-And-Taking-Your-Test-Process-Further
+2. Workshop-Part-Two: Robot Framework strategies for enhancing existing tests and taking your test process further
 ```
 ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Postman-Newman-Workshop-Examples
 ./start-specific-docker-example-workflows-for-workshop.sh Part-Two-Python-Library-Workshop-Examples
@@ -54,7 +54,7 @@ There will be presentation slides explaining the following in more detail and I 
 ./start-specific-local-machine-example-workflows-for-workshop.sh Hybrid-Tool-Appium-Workshop-Example
 ```
 
-3. Part-Three--Combined-Results-Visualizing-Your-Testing-Story
+3. Workshop-Part-Three: Combined results visualizing your testing story
 ```
 ./start-specific-result-gathering-example-workflows-for-workshop.sh Combined-Results-Dashboard-Workshop-Example
 ./start-specific-result-gathering-example-workflows-for-workshop.sh Metrics-Dashboard-Workshop-Example
@@ -70,6 +70,12 @@ If you have a Windows operating system, the following options may work for you..
 - Consider downloading Git for Windows -> https://git-scm.com/download/win and https://gitforwindows.org/
 - Windows 10 users may already have Bash -> http://techgenix.com/bash-on-windows-10/
 - Since you will probably already have docker-compose installed you can copy the commands and run them individually.
+
+***
+
+Slides for the workshop and a related RoboCon 2019 lightning talk can be found in this repo.
+- Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf
+- [Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf](https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf)
 
 ***
 
