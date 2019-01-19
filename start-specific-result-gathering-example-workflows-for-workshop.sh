@@ -11,7 +11,7 @@ if [ "$1" == "Combined-Results-Dashboard-Workshop-Example" ]; then
   echo
   echo "------------------------------------[[[[ Gather, Combine Results, And Deploy To Heroku -- Combined Results Dashboard ]]]]------------------------------------"
   echo
-  rebot --removekeywords name:Capture\ Page\ Screenshot --removekeywords name:Take\ Screenshot --suitestatlevel 1 -N "Combined Results Dashboard - " --report NONE --log ./combined-results.html --output ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/*output.xml
+  rebot --removekeywords name:Capture\ Page\ Screenshot --removekeywords name:Take\ Screenshot --suitestatlevel 1 -N "Combined Results Dashboard - " --report NONE --log ./combined-results.html --output ./Workshop-Examples/Workshop-Part-Three/*output.xml
   echo "Gathered, combined results files, and deployed them to Heroku on $TIMESTAMP" > ./git_commit_message.txt
   GIT_COMMIT_MESSAGE=$(cat ./git_commit_message.txt) &&
   git add . &&
@@ -23,11 +23,11 @@ if [ "$1" == "Metrics-Dashboard-Workshop-Example" ]; then
   # The git CLI tool is required before proceeding or you can do all of this manually through GitHub's app.
   # The https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 repo was used to deploy new dashboards to https://robocon2019-workshop-dashboard.herokuapp.com/
   # You should consider setting up your own deployment strategy for your Robot framework results files.
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/RobotFramework-Metrics-Results/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/RobotFramework-Metrics-Results/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
   echo
   echo "------------------------------------[[[[ Gather, Combine Metrics, And Deploy To Heroku -- Robot Framework Metrics Dashboard ]]]]------------------------------------"
   echo
-  cd ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/
+  cd ./Workshop-Examples/Workshop-Part-Three/
   ## find . -name \*.jpg -exec cp {} ./RobotFramework-Metrics-Results \; > /dev/null 2>&1 &&
   cd ./RobotFramework-Metrics-Results
   git clone https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019.git ./Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
@@ -52,10 +52,10 @@ if [ "$1" == "Delete-All-Results-Files" ]; then
   echo "------------------------------------[[[[ Delete All Results Files ]]]]------------------------------------"
   echo
   echo
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/*.xml
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/*.html
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/*.png
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/*.jpg
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/RobotFramework-Metrics-Results/*.html
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/Graphwalker-Model-Based-Test-Results/*.html
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/*.xml
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/*.html
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/*.png
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/*.jpg
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/RobotFramework-Metrics-Results/*.html
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/Graphwalker-Model-Based-Test-Results/*.html
 fi

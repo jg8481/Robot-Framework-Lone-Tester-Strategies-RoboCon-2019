@@ -47,7 +47,7 @@ if [ "$1" == "Part-One-cURL-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -69,7 +69,7 @@ if [ "$1" == "Part-One-Requests-Library-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -91,7 +91,7 @@ if [ "$1" == "Part-One-Python-Library-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -113,7 +113,7 @@ if [ "$1" == "Part-One-Run-All-Docker-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -153,7 +153,7 @@ if [ "$1" == "Part-Two-Python-Library-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -175,7 +175,7 @@ if [ "$1" == "Part-Two-Requests-Library-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build
@@ -197,7 +197,7 @@ if [ "$1" == "Part-Two-cURL-Workshop-Examples" ]; then
   ## The following file removal command for '.pabotsuitenames' prevents this error when running several different PaBot Docker examples...
   ## [ ERROR ] Suite 'Robot Framework test run with Requests Library in parallel' contains no tests in suite
   rm -rf ./Workshop-Examples/.pabotsuitenames
-  rm -rf ./Workshop-Examples/Part-Three--Combined-Results-Visualizing-Your-Testing-Story/pabot_results
+  rm -rf ./Workshop-Examples/Workshop-Part-Three/pabot_results
   docker-compose -f docker-compose.yml down
   docker-compose -f docker-compose.yml rm -f
   docker-compose -f docker-compose.yml build

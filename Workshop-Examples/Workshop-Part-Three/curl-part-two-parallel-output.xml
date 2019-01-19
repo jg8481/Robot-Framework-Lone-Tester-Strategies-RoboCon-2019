@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generator="Rebot 3.1.1 (Python 3.5.6 on linux)" generated="20190119 12:28:13.163">
+<suite id="s1" name="Robot Framework test run with cURL in parallel and generate random malformed test data using the Radamsa general-purpose fuzzer">
+<suite source="/rfw/Tests/Workshop-Part-Two/Docker-Example-Curl1-Enhanced-Version.robot" id="s1-s1" name="Docker-Example-Curl1-Enhanced-Version">
+<kw library="OperatingSystem" type="teardown" name="Remove File">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${PATH}//testlog-check-response-after-using-radamsa-on-the-json1.txt</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20190119 12:28:12.849">Removed file '&lt;a href="file:///rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt"&gt;/rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190119 12:28:12.846" endtime="20190119 12:28:12.849"></status>
+</kw>
+<test id="s1-s1-t1" name="CURL EXAMPLE PART TWO - ROBOT FILE ONE : Send a PATCH request to &quot;userId&quot; for jsonplaceholder.typicode.com/posts/1 using malformed test data and check the response.">
+<kw library="SharedKeywordsAndListeners" name="Create Random Malformed Test Data With Radamsa">
+<arguments>
+<arg>¯\_(ツ)_/¯</arg>
+</arguments>
+<kw library="Process" name="Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>echo "${TEST_DATA}" | radamsa -n 2 &gt; ./malformed-test-data.txt</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+<arg>cwd=${PATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.601">Starting process:
+echo "¯_(ツ)_/¯" | radamsa -n 2 &gt; ./malformed-test-data.txt</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.606">Waiting for process to complete.</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.709">Process completed.</msg>
+<status status="PASS" starttime="20190119 12:28:12.601" endtime="20190119 12:28:12.709"></status>
+</kw>
+<status status="PASS" starttime="20190119 12:28:12.600" endtime="20190119 12:28:12.710"></status>
+</kw>
+<kw library="OperatingSystem" name="Run">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>MALFORMED_TEST_DATA=$(cat /rfw/Shared-Resources/malformed-test-data.txt) &amp;&amp; curl -i -X PATCH -H 'Content-Type: application/json' http://${BASE_URL}/posts/1 -d '{"userId": '"$MALFORMED_TEST_DATA"'}' 2&gt;/dev/null &gt; /rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.717">Running command 'MALFORMED_TEST_DATA=$(cat /rfw/Shared-Resources/malformed-test-data.txt) &amp;&amp; curl -i -X PATCH -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/1 -d '{"userId": '"$MALFORMED_TEST_DATA"'}' 2&gt;/dev/null &gt; /rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt'.</msg>
+<status status="PASS" starttime="20190119 12:28:12.711" endtime="20190119 12:28:12.830"></status>
+</kw>
+<kw library="OperatingSystem" name="Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${PATH}//testlog-check-response-after-using-radamsa-on-the-json1.txt</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</var>
+</assign>
+<msg level="INFO" html="yes" timestamp="20190119 12:28:12.831">Getting file '&lt;a href="file:///rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt"&gt;/rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json1.txt&lt;/a&gt;'.</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.836">${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE} = HTTP/1.1 500 Internal Server Error
+Date: Sat, 19 Jan 2019 12:28:12 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=de28d4ada2464e568d4...</msg>
+<status status="PASS" starttime="20190119 12:28:12.830" endtime="20190119 12:28:12.836"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.837">HTTP/1.1 500 Internal Server Error
+Date: Sat, 19 Jan 2019 12:28:12 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=de28d4ada2464e568d4934f1dee0b1c471547900892; expires=Sun, 19-Jan-20 12:28:12 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 49b94cc3a788c5c6-EWR
+
+SyntaxError: Unexpected token ¯ in JSON at position 11
+    at JSON.parse (&lt;anonymous&gt;)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:182:13)
+    at endReadableNT (_stream_readable.js:1094:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)</msg>
+<status status="PASS" starttime="20190119 12:28:12.837" endtime="20190119 12:28:12.837"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.837" endtime="20190119 12:28:12.838"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.838" endtime="20190119 12:28:12.839"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.839" endtime="20190119 12:28:12.840"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.840" endtime="20190119 12:28:12.841"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.841" endtime="20190119 12:28:12.841"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.842" endtime="20190119 12:28:12.842"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.842" endtime="20190119 12:28:12.843"></status>
+</kw>
+<kw library="BuiltIn" name="Should Not Contain">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+<arg>200 OK</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.843" endtime="20190119 12:28:12.844"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status status="PASS" critical="yes" starttime="20190119 12:28:12.599" endtime="20190119 12:28:12.844"></status>
+</test>
+<doc>Part Two of the cURL examples has been enhanced by using the SharedKeywordsAndListeners.robot resource file to add randomly generated malformed data to a test through the "Create Random Malformed Test Data With Radamsa" keyword.
+This keyword turns the cURL examples into an API fuzz testing tool that can run in serial or in parallel.</doc>
+<status status="PASS" starttime="20190119 12:28:12.519" endtime="20190119 12:28:12.849"></status>
+</suite>
+<suite source="/rfw/Tests/Workshop-Part-Two/Docker-Example-Curl2-Enhanced-Version.robot" id="s1-s2" name="Docker-Example-Curl2-Enhanced-Version">
+<kw library="OperatingSystem" type="teardown" name="Remove File">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>${PATH}//testlog-check-response-after-using-radamsa-on-the-json2.txt</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20190119 12:28:12.878">Removed file '&lt;a href="file:///rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt"&gt;/rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190119 12:28:12.875" endtime="20190119 12:28:12.878"></status>
+</kw>
+<test id="s1-s2-t1" name="CURL EXAMPLE PART TWO - ROBOT FILE TWO : Send a PATCH request to &quot;title&quot; for jsonplaceholder.typicode.com/posts/1 using malformed test data and check the response.">
+<kw library="SharedKeywordsAndListeners" name="Create Random Malformed Test Data With Radamsa">
+<arguments>
+<arg>¯\_(ツ)_/¯</arg>
+</arguments>
+<kw library="Process" name="Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>echo "${TEST_DATA}" | radamsa -n 2 &gt; ./malformed-test-data.txt</arg>
+<arg>shell=True</arg>
+<arg>timeout=20s</arg>
+<arg>on_timeout=continue</arg>
+<arg>cwd=${PATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.603">Starting process:
+echo "¯_(ツ)_/¯" | radamsa -n 2 &gt; ./malformed-test-data.txt</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.609">Waiting for process to complete.</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.713">Process completed.</msg>
+<status status="PASS" starttime="20190119 12:28:12.602" endtime="20190119 12:28:12.714"></status>
+</kw>
+<status status="PASS" starttime="20190119 12:28:12.602" endtime="20190119 12:28:12.714"></status>
+</kw>
+<kw library="OperatingSystem" name="Run">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>MALFORMED_TEST_DATA=$(cat /rfw/Shared-Resources/malformed-test-data.txt) &amp;&amp; curl -i -X PATCH -H 'Content-Type: application/json' http://${BASE_URL}/posts/1 -d '{"title": '"$MALFORMED_TEST_DATA"'}' 2&gt;/dev/null &gt; /rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.719">Running command 'MALFORMED_TEST_DATA=$(cat /rfw/Shared-Resources/malformed-test-data.txt) &amp;&amp; curl -i -X PATCH -H 'Content-Type: application/json' http://jsonplaceholder.typicode.com/posts/1 -d '{"title": '"$MALFORMED_TEST_DATA"'}' 2&gt;/dev/null &gt; /rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt'.</msg>
+<status status="PASS" starttime="20190119 12:28:12.714" endtime="20190119 12:28:12.855"></status>
+</kw>
+<kw library="OperatingSystem" name="Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${PATH}//testlog-check-response-after-using-radamsa-on-the-json2.txt</arg>
+</arguments>
+<assign>
+<var>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</var>
+</assign>
+<msg level="INFO" html="yes" timestamp="20190119 12:28:12.857">Getting file '&lt;a href="file:///rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt"&gt;/rfw/Shared-Resources/testlog-check-response-after-using-radamsa-on-the-json2.txt&lt;/a&gt;'.</msg>
+<msg level="INFO" timestamp="20190119 12:28:12.862">${CURL_ROBOT_FILE_TWO_PUT_RESPONSE} = HTTP/1.1 500 Internal Server Error
+Date: Sat, 19 Jan 2019 12:28:12 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d917be347d4d3d775ba...</msg>
+<status status="PASS" starttime="20190119 12:28:12.856" endtime="20190119 12:28:12.862"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:28:12.863">HTTP/1.1 500 Internal Server Error
+Date: Sat, 19 Jan 2019 12:28:12 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d917be347d4d3d775ba0288fb5d3ae6821547900892; expires=Sun, 19-Jan-20 12:28:12 GMT; path=/; domain=.typicode.com; HttpOnly
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+Server: cloudflare
+CF-RAY: 49b94cc3a54499f8-EWR
+
+SyntaxError: Unexpected token ¯ in JSON at position 10
+    at JSON.parse (&lt;anonymous&gt;)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (events.js:182:13)
+    at endReadableNT (_stream_readable.js:1094:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)</msg>
+<status status="PASS" starttime="20190119 12:28:12.863" endtime="20190119 12:28:12.863"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.864" endtime="20190119 12:28:12.864"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.865" endtime="20190119 12:28:12.866"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.866" endtime="20190119 12:28:12.867"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.867" endtime="20190119 12:28:12.868"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.868" endtime="20190119 12:28:12.869"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.869" endtime="20190119 12:28:12.870"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.870" endtime="20190119 12:28:12.871"></status>
+</kw>
+<kw library="BuiltIn" name="Should Not Contain">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${CURL_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+<arg>200 OK</arg>
+<arg>ignore_case=True</arg>
+</arguments>
+<status status="PASS" starttime="20190119 12:28:12.871" endtime="20190119 12:28:12.871"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Unrefined_And_Created_In_A_Hurry</tag>
+</tags>
+<status status="PASS" critical="yes" starttime="20190119 12:28:12.600" endtime="20190119 12:28:12.872"></status>
+</test>
+<doc>Part Two of the cURL examples has been enhanced by using the SharedKeywordsAndListeners.robot resource file to add randomly generated malformed data to a test through the "Create Random Malformed Test Data With Radamsa" keyword.
+This keyword turns the cURL examples into an API fuzz testing tool that can run in serial or in parallel.</doc>
+<status status="PASS" starttime="20190119 12:28:12.519" endtime="20190119 12:28:12.878"></status>
+</suite>
+<status status="PASS" starttime="20190119 12:28:12.484" endtime="20190119 12:28:12.881"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0">Regression_Tests</stat>
+<stat pass="2" fail="0">Unrefined_And_Created_In_A_Hurry</stat>
+</tag>
+<suite>
+<stat pass="2" id="s1" name="Robot Framework test run with cURL in parallel and generate random malformed test data using the Radamsa general-purpose fuzzer" fail="0">Robot Framework test run with cURL in parallel and generate random malformed test data using the Radamsa general-purpose fuzzer</stat>
+<stat pass="1" id="s1-s1" name="Docker-Example-Curl1-Enhanced-Version" fail="0">Robot Framework test run with cURL in parallel and generate random malformed test data using the Radamsa general-purpose fuzzer.Docker-Example-Curl1-Enhanced-Version</stat>
+<stat pass="1" id="s1-s2" name="Docker-Example-Curl2-Enhanced-Version" fail="0">Robot Framework test run with cURL in parallel and generate random malformed test data using the Radamsa general-purpose fuzzer.Docker-Example-Curl2-Enhanced-Version</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

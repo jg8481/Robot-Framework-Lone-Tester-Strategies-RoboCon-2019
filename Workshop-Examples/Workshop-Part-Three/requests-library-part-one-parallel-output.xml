@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generator="Rebot 3.1.1 (Python 3.5.6 on linux)" generated="20190119 12:27:10.751">
+<suite name="Robot Framework test run with Requests Library in parallel" id="s1">
+<suite name="Docker-Example-Requests-Library1" source="/rfw/Tests/Workshop-Part-One/Docker-Example-Requests-Library1.robot" id="s1-s1">
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a POST request to jsonplaceholder.typicode.com/posts and check the response." id="s1-s1-t1">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:09.989">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:09.990" starttime="20190119 12:27:09.988"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:09.990">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:09.991" starttime="20190119 12:27:09.990"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.103">Post Request using : alias=jsonplaceholder, uri=/posts, data=&lt;empty&gt;, headers={'Content-Type': 'application/json'}, files=None, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.103">${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.103" starttime="20190119 12:27:09.991"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.105" starttime="20190119 12:27:10.103"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.106" starttime="20190119 12:27:10.105"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.107" starttime="20190119 12:27:10.106"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.109" starttime="20190119 12:27:10.108"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.110" starttime="20190119 12:27:10.109"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.111" starttime="20190119 12:27:10.110"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.112" starttime="20190119 12:27:10.111"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.113" starttime="20190119 12:27:10.112"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.114" starttime="20190119 12:27:10.113"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.115" starttime="20190119 12:27:10.114"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.116" starttime="20190119 12:27:10.115"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE.status_code}</arg>
+<arg>201</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.117">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.117" starttime="20190119 12:27:10.116"></status>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE.json()}</arg>
+<arg>id</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.117" starttime="20190119 12:27:10.117"></status>
+</kw>
+<kw name="Get Dictionary Values" library="Collections">
+<doc>Returns values of the given dictionary.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_POST_RESPONSE.json()}</arg>
+</arguments>
+<assign>
+<var>${POST_RESPONSE_VALUES}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.118">${POST_RESPONSE_VALUES} = [101]</msg>
+<status status="PASS" endtime="20190119 12:27:10.118" starttime="20190119 12:27:10.118"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${POST_RESPONSE_VALUES}</arg>
+<arg>[101]</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.119">Argument types are:
+&lt;class 'list'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.119" starttime="20190119 12:27:10.118"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.119" starttime="20190119 12:27:09.986"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a PATCH request to &quot;title&quot; for jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-s1-t2">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.123">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.123" starttime="20190119 12:27:10.122"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.123">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.124" starttime="20190119 12:27:10.123"></status>
+</kw>
+<kw name="Patch Request" library="RequestsLibrary">
+<doc>Send a PATCH request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/1</arg>
+<arg>data={"title":"Testing with Robot Framework."}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.241">Patch Request using : alias=jsonplaceholder, uri=/posts/1, data={"title":"Testing with Robot Framework."},                     headers={'Content-Type': 'application/json'}, files=None, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.241">${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.241" starttime="20190119 12:27:10.124"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.243" starttime="20190119 12:27:10.242"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.245" starttime="20190119 12:27:10.244"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.246" starttime="20190119 12:27:10.245"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.248" starttime="20190119 12:27:10.246"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.249" starttime="20190119 12:27:10.248"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.250" starttime="20190119 12:27:10.249"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.252" starttime="20190119 12:27:10.251"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.253" starttime="20190119 12:27:10.252"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.254" starttime="20190119 12:27:10.254"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.255" starttime="20190119 12:27:10.255"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.257" starttime="20190119 12:27:10.256"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.258">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.258" starttime="20190119 12:27:10.257"></status>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_PATCH_RESPONSE.json()}</arg>
+<arg>Testing with Robot Framework.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.259" starttime="20190119 12:27:10.258"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.259" starttime="20190119 12:27:10.120"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a GET request to jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-s1-t3">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.263">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.263" starttime="20190119 12:27:10.262"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.264">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.264" starttime="20190119 12:27:10.263"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/1</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.307">Get Request using : alias=jsonplaceholder, uri=/posts/1, headers={'Content-Type': 'application/json'} json=None</msg>
+<msg level="INFO" timestamp="20190119 12:27:10.307">${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.307" starttime="20190119 12:27:10.264"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.308" starttime="20190119 12:27:10.308"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.310" starttime="20190119 12:27:10.309"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.311" starttime="20190119 12:27:10.310"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.312" starttime="20190119 12:27:10.311"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.313" starttime="20190119 12:27:10.312"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.314" starttime="20190119 12:27:10.313"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.315" starttime="20190119 12:27:10.314"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.317" starttime="20190119 12:27:10.316"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.318" starttime="20190119 12:27:10.317"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.319" starttime="20190119 12:27:10.318"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.319" starttime="20190119 12:27:10.319"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.320">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.320" starttime="20190119 12:27:10.320"></status>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.json()}</arg>
+<arg>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.321" starttime="20190119 12:27:10.320"></status>
+</kw>
+<kw name="Dictionary Should Not Contain Value" library="Collections">
+<doc>Fails if ``value`` is found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_GET_RESPONSE.json()}</arg>
+<arg>Testing with Robot Framework.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.322" starttime="20190119 12:27:10.321"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.322" starttime="20190119 12:27:10.260"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE ONE : Send a DELETE request to jsonplaceholder.typicode.com/posts/1 and check the response." id="s1-s1-t4">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.325">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.325" starttime="20190119 12:27:10.325"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.326">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.326" starttime="20190119 12:27:10.326"></status>
+</kw>
+<kw name="Delete Request" library="RequestsLibrary">
+<doc>Send a DELETE request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/1</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.439">Delete Request using : alias=jsonplaceholder, uri=/posts/1, data=None,                     headers={'Content-Type': 'application/json'}, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.439">${REQUESTS_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.439" starttime="20190119 12:27:10.327"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.441" starttime="20190119 12:27:10.440"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.443" starttime="20190119 12:27:10.441"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.444" starttime="20190119 12:27:10.443"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.445" starttime="20190119 12:27:10.444"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.446" starttime="20190119 12:27:10.445"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.447" starttime="20190119 12:27:10.447"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.448" starttime="20190119 12:27:10.448"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.449">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.449" starttime="20190119 12:27:10.448"></status>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is empty.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_ONE_DELETE_RESPONSE.json()}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.450">Length is 0</msg>
+<status status="PASS" endtime="20190119 12:27:10.450" starttime="20190119 12:27:10.449"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.450" starttime="20190119 12:27:10.323"></status>
+</test>
+<doc>In a hypothetical scenario, where you are split between 3 or more frequently changing projects. Maybe you were able to convince your team leaders and developers
+to let you try out a different and more refined approach for building out your Robot Framework regression tests. The following assumes that your team is comfortable
+with looking at and contributing to a test that is mostly written using keywords from a Robot Framework test library. In this case the robotframework-requests library...</doc>
+<status status="PASS" endtime="20190119 12:27:10.452" starttime="20190119 12:27:09.906"></status>
+</suite>
+<suite name="Docker-Example-Requests-Library2" source="/rfw/Tests/Workshop-Part-One/Docker-Example-Requests-Library2.robot" id="s1-s2">
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a PUT request to jsonplaceholder.typicode.com/posts and check the response." id="s1-s2-t1">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:09.989">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:09.989" starttime="20190119 12:27:09.988"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:09.990">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:09.990" starttime="20190119 12:27:09.990"></status>
+</kw>
+<kw name="Put Request" library="RequestsLibrary">
+<doc>Send a PUT request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/2</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.102">Put Request using : alias=jsonplaceholder, uri=/posts/2, data=None,                     headers=None, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.102">${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.102" starttime="20190119 12:27:09.991"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.104" starttime="20190119 12:27:10.103"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.105" starttime="20190119 12:27:10.104"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.107" starttime="20190119 12:27:10.106"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.108" starttime="20190119 12:27:10.107"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.109" starttime="20190119 12:27:10.108"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.111" starttime="20190119 12:27:10.110"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.111" starttime="20190119 12:27:10.111"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.113" starttime="20190119 12:27:10.112"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.114" starttime="20190119 12:27:10.113"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.115" starttime="20190119 12:27:10.114"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.116" starttime="20190119 12:27:10.115"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.116">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.117" starttime="20190119 12:27:10.116"></status>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE.json()}</arg>
+<arg>id</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.117" starttime="20190119 12:27:10.117"></status>
+</kw>
+<kw name="Get Dictionary Values" library="Collections">
+<doc>Returns values of the given dictionary.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PUT_RESPONSE.json()}</arg>
+</arguments>
+<assign>
+<var>${PUT_RESPONSE_VALUES}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.118">${PUT_RESPONSE_VALUES} = [2]</msg>
+<status status="PASS" endtime="20190119 12:27:10.118" starttime="20190119 12:27:10.117"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${PUT_RESPONSE_VALUES}</arg>
+<arg>[2]</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.118">Argument types are:
+&lt;class 'list'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.118" starttime="20190119 12:27:10.118"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.119" starttime="20190119 12:27:09.986"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a PATCH request to &quot;body&quot; for jsonplaceholder.typicode.com/posts/2 and check the response." id="s1-s2-t2">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.122">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.122" starttime="20190119 12:27:10.122"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.123">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.123" starttime="20190119 12:27:10.122"></status>
+</kw>
+<kw name="Patch Request" library="RequestsLibrary">
+<doc>Send a PATCH request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/2</arg>
+<arg>data={"body":"Testing with Robot Framework."}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.244">Patch Request using : alias=jsonplaceholder, uri=/posts/2, data={"body":"Testing with Robot Framework."},                     headers={'Content-Type': 'application/json'}, files=None, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.244">${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.244" starttime="20190119 12:27:10.123"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.246" starttime="20190119 12:27:10.245"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.247" starttime="20190119 12:27:10.246"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.248" starttime="20190119 12:27:10.247"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.250" starttime="20190119 12:27:10.249"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.251" starttime="20190119 12:27:10.250"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.252" starttime="20190119 12:27:10.251"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.253" starttime="20190119 12:27:10.253"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.255" starttime="20190119 12:27:10.254"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.256" starttime="20190119 12:27:10.255"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.257" starttime="20190119 12:27:10.257"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.258" starttime="20190119 12:27:10.258"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.259">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.259" starttime="20190119 12:27:10.259"></status>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_PATCH_RESPONSE.json()}</arg>
+<arg>Testing with Robot Framework.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.260" starttime="20190119 12:27:10.260"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.260" starttime="20190119 12:27:10.120"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a GET request to jsonplaceholder.typicode.com/posts/2 and check the response." id="s1-s2-t3">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.264">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.264" starttime="20190119 12:27:10.263"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.265">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.265" starttime="20190119 12:27:10.264"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/2</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.304">Get Request using : alias=jsonplaceholder, uri=/posts/2, headers={'Content-Type': 'application/json'} json=None</msg>
+<msg level="INFO" timestamp="20190119 12:27:10.305">${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.305" starttime="20190119 12:27:10.265"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.307" starttime="20190119 12:27:10.305"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.308" starttime="20190119 12:27:10.307"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.309" starttime="20190119 12:27:10.308"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.311" starttime="20190119 12:27:10.309"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.312" starttime="20190119 12:27:10.311"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.313" starttime="20190119 12:27:10.312"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.314" starttime="20190119 12:27:10.313"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.json()}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.315" starttime="20190119 12:27:10.314"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.316" starttime="20190119 12:27:10.315"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.317" starttime="20190119 12:27:10.316"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.318" starttime="20190119 12:27:10.317"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.319">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.319" starttime="20190119 12:27:10.318"></status>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.json()}</arg>
+<arg>qui est esse</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.320" starttime="20190119 12:27:10.319"></status>
+</kw>
+<kw name="Dictionary Should Not Contain Value" library="Collections">
+<doc>Fails if ``value`` is found from ``dictionary``.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_GET_RESPONSE.json()}</arg>
+<arg>Testing with Robot Framework.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.320" starttime="20190119 12:27:10.320"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.321" starttime="20190119 12:27:10.262"></status>
+</test>
+<test name="REQUESTS LIBRARY EXAMPLE PART ONE - ROBOT FILE TWO : Send a DELETE request to jsonplaceholder.typicode.com/posts/2 and check the response." id="s1-s2-t4">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.324">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" endtime="20190119 12:27:10.324" starttime="20190119 12:27:10.324"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>http://${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.325">Creating Session using : alias=jsonplaceholder, url=http://jsonplaceholder.typicode.com, headers={'Content-Type': 'application/json'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20190119 12:27:10.325" starttime="20190119 12:27:10.325"></status>
+</kw>
+<kw name="Delete Request" library="RequestsLibrary">
+<doc>Send a DELETE request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>jsonplaceholder</arg>
+<arg>/posts/2</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE}</var>
+</assign>
+<msg level="INFO" timestamp="20190119 12:27:10.436">Delete Request using : alias=jsonplaceholder, uri=/posts/2, data=None,                     headers={'Content-Type': 'application/json'}, allow_redirects=True </msg>
+<msg level="INFO" timestamp="20190119 12:27:10.437">${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.437" starttime="20190119 12:27:10.326"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.439" starttime="20190119 12:27:10.437"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.440" starttime="20190119 12:27:10.439"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.441" starttime="20190119 12:27:10.440"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE}</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.443" starttime="20190119 12:27:10.441"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.444" starttime="20190119 12:27:10.443"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.445" starttime="20190119 12:27:10.444"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" endtime="20190119 12:27:10.446" starttime="20190119 12:27:10.445"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.447">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20190119 12:27:10.447" starttime="20190119 12:27:10.447"></status>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is empty.</doc>
+<arguments>
+<arg>${REQUESTS_LIBRARY_ROBOT_FILE_TWO_DELETE_RESPONSE.json()}</arg>
+</arguments>
+<msg level="INFO" timestamp="20190119 12:27:10.448">Length is 0</msg>
+<status status="PASS" endtime="20190119 12:27:10.448" starttime="20190119 12:27:10.447"></status>
+</kw>
+<tags>
+<tag>Regression_Tests</tag>
+<tag>Slightly_Refined_And_Room_For_Enhancements</tag>
+</tags>
+<status status="PASS" critical="yes" endtime="20190119 12:27:10.449" starttime="20190119 12:27:10.322"></status>
+</test>
+<doc>In a hypothetical scenario, where you are split between 3 or more frequently changing projects. Maybe you were able to convince your team leaders and developers
+to let you try out a different and more refined approach for building out your Robot Framework regression tests. The following assumes that your team is comfortable
+with looking at and contributing to a test that is mostly written using keywords from a Robot Framework test library. In this case the robotframework-requests library...</doc>
+<status status="PASS" endtime="20190119 12:27:10.450" starttime="20190119 12:27:09.905"></status>
+</suite>
+<status status="PASS" endtime="20190119 12:27:10.456" starttime="20190119 12:27:09.867"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="8">Regression_Tests</stat>
+<stat fail="0" pass="8">Slightly_Refined_And_Room_For_Enhancements</stat>
+</tag>
+<suite>
+<stat fail="0" name="Robot Framework test run with Requests Library in parallel" pass="8" id="s1">Robot Framework test run with Requests Library in parallel</stat>
+<stat fail="0" name="Docker-Example-Requests-Library1" pass="4" id="s1-s1">Robot Framework test run with Requests Library in parallel.Docker-Example-Requests-Library1</stat>
+<stat fail="0" name="Docker-Example-Requests-Library2" pass="4" id="s1-s2">Robot Framework test run with Requests Library in parallel.Docker-Example-Requests-Library2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
