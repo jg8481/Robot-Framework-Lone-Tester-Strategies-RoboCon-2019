@@ -74,7 +74,7 @@ If you have a Windows operating system, the following options may work for you..
 ***
 
 Slides for the workshop and a related RoboCon 2019 lightning talk can be found in this repo.
-- Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf
+- [Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf](https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf)
 - [Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf](https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf)
 
 ***
