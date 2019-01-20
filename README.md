@@ -1,4 +1,4 @@
-# Robot Framework strategies for the lone tester - RoboCon 2019
+# Robot Framework strategies for the lone tester - RoboCon 2019 Workshop
 
 ## General Information
 
