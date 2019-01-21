@@ -225,7 +225,7 @@ GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_
     Should Be Equal As Strings    ${GRAPHWALKER_SLOW_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${GRAPHWALKER_SLOW_GET_RESPONSE.json()}    quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
     Dictionary Should Not Contain Value    ${GRAPHWALKER_SLOW_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    send_get_to_jsonplaceholder_after_sending_invalid_data_on_a_slow_connection
+    [Tags]    send_get_to_jsonplaceholder_after_sending_invalid_data_on_a_slow_connection    Graphwalker_Vertex_Model-Based_Tests
 
 
 GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_valid_data_on_a_slow_connection
@@ -248,7 +248,7 @@ GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_
     Should Be Equal As Strings    ${GRAPHWALKER_SLOW_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${GRAPHWALKER_SLOW_GET_RESPONSE.json()}    quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
     Dictionary Should Not Contain Value    ${GRAPHWALKER_SLOW_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    send_get_to_jsonplaceholder_after_sending_valid_data_on_a_slow_connection
+    [Tags]    send_get_to_jsonplaceholder_after_sending_valid_data_on_a_slow_connection    Graphwalker_Vertex_Model-Based_Tests
 
 
 GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_invalid_data
@@ -270,7 +270,7 @@ GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_
     Should Be Equal As Strings    ${GRAPHWALKER_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${GRAPHWALKER_GET_RESPONSE.json()}    quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
     Dictionary Should Not Contain Value    ${GRAPHWALKER_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    send_get_to_jsonplaceholder_after_sending_invalid_data
+    [Tags]    send_get_to_jsonplaceholder_after_sending_invalid_data    Graphwalker_Vertex_Model-Based_Tests
 
 
 GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_valid_data
@@ -292,7 +292,7 @@ GRAPHWALKER VERTEX - TEST ASSERTION : send_get_to_jsonplaceholder_after_sending_
     Should Be Equal As Strings    ${GRAPHWALKER_GET_RESPONSE.status_code}    200
     Dictionary Should Contain Value    ${GRAPHWALKER_GET_RESPONSE.json()}    quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
     Dictionary Should Not Contain Value    ${GRAPHWALKER_GET_RESPONSE.json()}    Testing with Robot Framework.
-    [Tags]    send_get_to_jsonplaceholder_after_sending_valid_data
+    [Tags]    send_get_to_jsonplaceholder_after_sending_valid_data    Graphwalker_Vertex_Model-Based_Tests
 
 
 *** Keywords ***
