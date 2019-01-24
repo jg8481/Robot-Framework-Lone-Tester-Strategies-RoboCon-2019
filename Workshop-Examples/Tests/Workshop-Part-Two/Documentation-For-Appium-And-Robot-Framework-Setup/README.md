@@ -56,7 +56,7 @@ Keep running the `appium-doctor` command and follow its instructions until all A
 
 The following instructions assume that you have a real device connected to your machine. To use this tool with your device please make the necessary changes to the `*** Variables ***` in the `Hyrid-Session-Based-Test-Tool-For-Android.robot` file.
 
-??? --> After running the provided `...appium_setup_and_teardown.sh` shell scripts, all of these tools can be started with the `start...` or `test_runner...` shell scripts.
+After running the provided `...appium_setup_and_teardown.sh` shell scripts, all of these tools can be started with the `start...` or `test_runner...` shell scripts.
 
 After reading and installing all of the requirements in the Appium_And_Mobile_Device_Test_Tools README file, follow these instructions in the order provided below...
 
