@@ -77,6 +77,9 @@ Slides for the workshop and a related RoboCon 2019 lightning talk can be found i
 - [Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf](https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf)
 - [Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf](https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_More_than_just_automation_RoboCon-2019-Lightning-Talk-Slides.pdf)
 
+I also wrote an article on Medium describing the gist of my RoboCon 2019 lightning talk.
+- https://ixn.intersection.com/how-machine-learning-can-assist-testers-f42ce28e4792
+
 ***
 
 ## Big thank you to the following people and groups.
