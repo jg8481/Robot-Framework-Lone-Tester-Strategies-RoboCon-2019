@@ -97,6 +97,6 @@ I also wrote an article on Medium describing the gist of my RoboCon 2019 lightni
 - Shiva Prasad Adirala
 - The Docker development team
 - The Graphwalker development team
-- The entire Robot Framework community and its contributors.
+- The entire Robot Framework community and its contributors
 
 Their contributions to the testing community helped me a lot with this workshop and my day-to-day work.
