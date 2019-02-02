@@ -197,14 +197,14 @@ if [ "$1" == "Python-Library-Part-Two-Listeners-Randomized-Test-And-Suite-Execut
   ## The following used the '--rerunfailed' option...
   ##
   #pabot --verbose --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --randomize all --report NONE --output python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library in parallel" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
-  #pabot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailed /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --report NONE --output rerun-python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library at a time in parallel random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
+  #pabot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailed /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --report NONE --output rerun-python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library in parallel random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
   #rebot --report NONE --log /rfw/Workshop-Part-Three/python-library-part-two-parallel-run.html --output /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --merge /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml /rfw/Workshop-Part-Three/rerun-python-library-part-two-parallel-output.xml &&
   ## ********************************************************************************
   ## ********************************************************************************
   ## The following used the '--rerunfailedsuites' option...
   ##
   #pabot --verbose --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --randomize all --report NONE --output python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library in parallel" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library1-Enhanced-Version.robot ./Tests/Workshop-Part-Two/Docker-Example-Python-Library2-Enhanced-Version.robot &&
-  #pabot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailedsuites /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --report NONE --output rerun-python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library at a time in parallel random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
+  #pabot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailedsuites /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --report NONE --output rerun-python-library-part-two-parallel-output.xml --log python-library-part-two-parallel-run.html -N "Robot Framework test run with user-created Python Library in parallel random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
   #rebot --report NONE --log /rfw/Workshop-Part-Three/python-library-part-two-parallel-run.html --output /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml --merge /rfw/Workshop-Part-Three/python-library-part-two-parallel-output.xml /rfw/Workshop-Part-Three/rerun-python-library-part-two-parallel-output.xml &&
   ## ********************************************************************************
   ## ********************************************************************************
@@ -219,13 +219,13 @@ if [ "$1" == "Python-Library-Part-Two-Listeners-Randomized-Test-And-Suite-Execut
   echo "The following will do a serial run of the Docker-Example-Python-Library1-Enhanced-Version.robot and Docker-Example-Python-Library2-Enhanced-Version.robot files, and utilize 2 types of Robot Framework listeners and a team notification keyword. This test is also triggered in random order using the '--randomize all' option. Tests will fail, then Slack notifications will be sent out through the SharedKeywordsAndListeners.robot resource file."
   echo
   echo
-  robot --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --randomize all --report NONE --output python-library-part-two-serial-output.xml --log python-library-part-two-serial-run.html -N "Robot Framework test run with user-created Python Library at a time in serial random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
+  robot --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --randomize all --report NONE --output python-library-part-two-serial-output.xml --log python-library-part-two-serial-run.html -N "Robot Framework test run with user-created Python Library one test at a time in serial random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
   echo
   echo
   echo "At this point the Robot Framework test reruns will be triggered. They will fail again (as intended) and more Slack notifications will be sent out through the SharedKeywordsAndListeners.robot resource file."
   echo
   echo
-  robot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailedsuites /rfw/Workshop-Part-Three/python-library-part-two-serial-output.xml --report NONE --output rerun-python-library-part-two-serial-output.xml --log python-library-part-two-serial-run.html -N "Robot Framework test run with user-created Python Library at a time in serial random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
+  robot --nostatusrc --variable TEST_ENVIRONMENT:${TEST_ENVIRONMENT} --rerunfailedsuites /rfw/Workshop-Part-Three/python-library-part-two-serial-output.xml --report NONE --output rerun-python-library-part-two-serial-output.xml --log python-library-part-two-serial-run.html -N "Robot Framework test run with user-created Python Library one test at a time in serial random order" -d ./Workshop-Part-Three ./Tests/Workshop-Part-Two/Docker-Example-Python-Library*.robot &&
   echo
   echo
   echo "At this point only the serial outputs will be merged with a ReBot command."
