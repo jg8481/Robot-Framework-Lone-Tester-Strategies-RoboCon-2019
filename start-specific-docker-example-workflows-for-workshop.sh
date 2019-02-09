@@ -22,7 +22,7 @@ if [ "$1" == "Part-One-Postman-Newman-Workshop-Examples" ]; then
   # Before running this step you need to manually create your own ".env" file using the provided "template.env" file.
   source ./.env
   echo
-  echo "------------------------------------[[[[ Robot_Framework_Docker_Container - Part One - Postman Newman Example ]]]]------------------------------------"
+  echo "------------------------------------[[[[ Robot Framework Docker Container - Part One - Postman Newman Example ]]]]------------------------------------"
   echo
   echo "This Docker Container will run various test tools and Graphkwalker combined with Robot Framework. This run started on $TIMESTAMP."
   echo
