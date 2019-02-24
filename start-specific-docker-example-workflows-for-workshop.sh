@@ -279,3 +279,37 @@ if [ "$1" == "Previous-Short-Graphwalker-Run-Workshop-Example" ]; then
   TIMESTAMP2=$(date)
   echo "This test run ended on $TIMESTAMP2."
 fi
+
+usage_explanation() {
+  echo
+  echo
+  echo "------------------------------------[[[[ Tool Runner Script ]]]]------------------------------------"
+  echo
+  echo
+  echo "Please read the following to get a full explanation about how this works."
+  echo 
+  echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/README.md"
+  echo
+  echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf"
+  echo
+  echo
+}
+
+error_handler() {
+  local error_message="$@"
+  echo "${error_message}" 1>&2;
+}
+
+argument="$1"
+if [[ -z $argument ]] ; then
+  usage_explanation
+else
+  case $argument in
+    -h|--help)
+      usage_explanation
+      ;;
+    *)
+      usage_explanation
+      ;;
+  esac
+fi
