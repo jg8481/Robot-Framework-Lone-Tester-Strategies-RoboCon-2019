@@ -11,7 +11,7 @@ if [ "$1" == "Combined-Results-Dashboard-Workshop-Example" ]; then
   echo
   echo "------------------------------------[[[[ Gather, Combine Results, And Deploy To Heroku -- Combined Results Dashboard ]]]]------------------------------------"
   echo
-  rebot --removekeywords name:Capture\ Page\ Screenshot --removekeywords name:Take\ Screenshot --suitestatlevel 1 -N "Combined Results Dashboard - " --report NONE --log ./combined-results.html --output ./Workshop-Examples/Workshop-Part-Three/*output.xml
+  rebot --removekeywords name:Capture\ Page\ Screenshot --removekeywords name:Take\ Screenshot --suitestatlevel 1 -N "Combined Results Dashboard - " --report NONE --log ./combined-results.html ./Workshop-Examples/Workshop-Part-Three/*output.xml
   echo "Gathered, combined results files, and deployed them to Heroku on $TIMESTAMP" > ./git_commit_message.txt
   GIT_COMMIT_MESSAGE=$(cat ./git_commit_message.txt) &&
   git add . &&
@@ -68,7 +68,7 @@ usage_explanation() {
   echo
   echo
   echo "Please read the following to get a full explanation about how this works."
-  echo 
+  echo
   echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/README.md"
   echo
   echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf"
