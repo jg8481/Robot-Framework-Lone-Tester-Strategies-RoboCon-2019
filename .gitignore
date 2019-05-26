@@ -33,3 +33,4 @@ Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
 /Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
 *.jpg
 *.png
+*.DS_Store
