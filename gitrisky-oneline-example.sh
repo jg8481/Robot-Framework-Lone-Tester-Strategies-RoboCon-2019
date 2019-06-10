@@ -1,5 +1,4 @@
 #! /bin/bash
-
 clear
 echo
 read -p "Please provide a full path to the cloned Git repo: " REPO_PATH
