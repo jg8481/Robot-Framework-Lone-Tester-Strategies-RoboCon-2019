@@ -34,9 +34,9 @@ if [ "$1" == "Hybrid-Tool-Desktop-Workshop-Example" ]; then
   echo
   echo "https://github.com/hinnefe2/gitrisky"
   echo
-  echo "After installing gitrisky and running the 'gitrisky train' command in your git repo the following shell oneliner works well, but also requires the team's git commit messages to provide enough information..."
+  echo "After installing gitrisky and running the 'gitrisky train' command in your git repo the following Shell script works well, but also requires the team's git commit messages to provide enough information..."
   echo
-  cat ./gitrisky-oneline-example.sh
+  echo "In another terminal window run this command from this repo and follow the instructions... bash ./gitrisky-oneline-example.sh"
   echo
   echo "The gitrisky tool will not work if the 'gitrisky train' command returns a message that says something like...  Model trained on X training examples with 0 positive cases"
   echo
@@ -120,9 +120,9 @@ if [ "$1" == "Hybrid-Tool-Appium-Workshop-Example" ]; then
   echo
   echo "https://github.com/hinnefe2/gitrisky"
   echo
-  echo "After installing gitrisky and running the 'gitrisky train' command in your git repo the following shell oneliner works well, but also requires the team's git commit messages to provide enough information..."
+  echo "After installing gitrisky and running the 'gitrisky train' command in your git repo the following Shell script works well, but also requires the team's git commit messages to provide enough information..."
   echo
-  cat ./gitrisky-oneline-example.sh
+  echo "In another terminal window run this command from this repo and follow the instructions... bash ./gitrisky-oneline-example.sh"
   echo
   echo "The gitrisky tool will not work if the 'gitrisky train' command returns a message that says something like...  Model trained on X training examples with 0 positive cases"
   echo
@@ -189,7 +189,7 @@ usage_explanation() {
   echo
   echo
   echo "Please read the following to get a full explanation about how this works."
-  echo 
+  echo
   echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/README.md"
   echo
   echo "https://github.com/jg8481/Robot-Framework-Lone-Tester-Strategies-RoboCon-2019/blob/master/Robot_Framework_strategies_for_the_lone_tester_RoboCon-2019-Workshop-Slides.pdf"
