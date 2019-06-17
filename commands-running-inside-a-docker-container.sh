@@ -154,6 +154,7 @@ if [ "$1" == "Postman-Newman-Part-Two-Listeners-Randomized-Test-Execution-Failur
   echo 'BASE_URL='$BASE_URL
   echo
   cd /rfw
+  envsubst < ./Shared-Resources/template.slacktee > ./Shared-Resources/.slacktee
   echo
   echo
   echo "The following will run the Docker-Example-Postman-Newman-Enhanced-Version.robot file that now utilizes 2 types of Robot Framework listeners and a team notification keyword. This test is also triggered in random order using the '--randomize tests' option. A test will fail, then a Slack notification will be sent out through the SharedKeywordsAndListeners.robot resource file."
@@ -183,6 +184,7 @@ if [ "$1" == "Python-Library-Part-Two-Listeners-Randomized-Test-And-Suite-Execut
   echo 'BASE_URL='$BASE_URL
   echo
   cd /rfw
+  envsubst < ./Shared-Resources/template.slacktee > ./Shared-Resources/.slacktee
   echo
   echo
   echo "The following will do a parallel run of the Docker-Example-Python-Library1-Enhanced-Version.robot and Docker-Example-Python-Library2-Enhanced-Version.robot files, and utilize 2 types of Robot Framework listeners and a team notification keyword. This test is also triggered in random order using the '--randomize all' option. Tests will fail, then Slack notifications will be sent out through the SharedKeywordsAndListeners.robot resource file."
@@ -244,6 +246,7 @@ if [ "$1" == "Requests-Library-Part-Two-Random-String-Test-Data-Generation-For-A
   echo 'BASE_URL='$BASE_URL
   echo
   cd /rfw
+  envsubst < ./Shared-Resources/template.slacktee > ./Shared-Resources/.slacktee
   echo
   echo
   echo "The following will run Docker-Example-Requests-Library1-Enhanced-Version.robot and Docker-Example-Requests-Library2-Enhanced-Version.robot files in serial and generate random string test data using Robot Framwork's String library."
@@ -271,6 +274,7 @@ if [ "$1" == "cURL-Part-Two-Random-Malformed-Test-Data-Generation-For-API-Fuzz-T
   echo 'BASE_URL='$BASE_URL
   echo
   cd /rfw
+  envsubst < ./Shared-Resources/template.slacktee > ./Shared-Resources/.slacktee
   echo
   echo
   echo "The following will run Docker-Example-Curl1-Enhanced-Version.robot and Docker-Example-Curl2-Enhanced-Version.robot files in serial and generate random malformed test data using the Radamsa general-purpose fuzzer."
