@@ -5,7 +5,6 @@ TIMESTAMP=$(date)
 
 if [ "$1" == "Combined-Results-Dashboard-Workshop-Example" ]; then
   # The git CLI tool is required before proceeding or you can do all of this manually through GitHub's app.
-  # This https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 repo was used to deploy new dashboards to https://robocon2019-workshop-dashboard.herokuapp.com/
   # You should consider setting up your own deployment strategy for your Robot framework results files.
   rm -rf ./combined-results.html
   echo
@@ -21,7 +20,7 @@ fi
 
 if [ "$1" == "Metrics-Dashboard-Workshop-Example" ]; then
   # The git CLI tool is required before proceeding or you can do all of this manually through GitHub's app.
-  # The https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 repo was used to deploy new dashboards to https://robocon2019-workshop-dashboard.herokuapp.com/
+  # The https://github.com/jg8481/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019 repo was used to deploy new dashboards to https://robocon2019-sbtm-dashboard.herokuapp.com/
   # You should consider setting up your own deployment strategy for your Robot framework results files.
   rm -rf ./Workshop-Examples/Workshop-Part-Three/RobotFramework-Metrics-Results/Robot-Framework-Lone-Tester-Metrics-RoboCon-2019
   echo
