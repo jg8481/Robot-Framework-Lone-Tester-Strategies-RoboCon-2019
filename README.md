@@ -15,7 +15,7 @@ Bonus Content: There are some possibly interesting extras in the repo that I did
 - Options for generating randomized test data using builtin keywords or malformed test data with the well known Radamsa general purpose fuzzing tool, https://gitlab.com/akihe/radamsa
 - Several examples of Slack notification keywords running in hybrid-manual-automated tests and in Dockerized tests
 - Robot Framework + Graphwalker (a model-based testing tool) examples with replayable test runs while running a slow internet connection proxy called "Crapify", https://github.com/bcoe/crapify
-- Dashboard of Session Based Test Management using Shiva Prasad Adirala's excellent RobotFramework-Metrics project, https://github.com/adiralashiva8/robotframework-metrics
+- Dashboard of Session-based Test Management using Shiva Prasad Adirala's excellent RobotFramework-Metrics project, https://github.com/adiralashiva8/robotframework-metrics
 
 Before the workshop, please run the following on your machine.
 ```
