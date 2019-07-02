@@ -24,7 +24,7 @@ cd ./Robot-Framework-Lone-Tester-Strategies-RoboCon-2019
 ```
 Set up an `.env` file using the provided `template.env` file. After setting up your `.env` file you can run the following, but it will require Docker on your machine.
 ```
-sh ./start-specific-docker-example-workflows-for-workshop.sh Build-Docker-Container
+./start-specific-docker-example-workflows-for-workshop.sh Build-Docker-Container
 ```
 
 ## Workshop Examples
