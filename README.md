@@ -88,7 +88,7 @@ I also wrote an article on Medium describing the gist of my RoboCon 2019 lightni
 - Ed Manlove
 - Antti Karjalainen
 - James Bach
-- Jonathon Bach
+- Jonathan Bach
 - Michael Bolton
 - Cem Kaner
 - Kristian Karl
